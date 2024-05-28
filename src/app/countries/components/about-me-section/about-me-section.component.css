@@ -1,0 +1,10 @@
+ nav {
+  height: 60px;
+  padding: 0;
+  background-color: #4F4F4F;
+}
+
+div p {
+  font: 14px/1.5em Avenir;
+  color: #4F4F4F;
+}

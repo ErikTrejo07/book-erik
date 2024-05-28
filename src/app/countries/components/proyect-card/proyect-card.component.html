@@ -1,0 +1,30 @@
+
+<ul class="list-group">
+  <div class="row">
+
+      <li *ngFor="let proyect of proyectList;" class="col-12 col-md-6">
+        <div class="card">
+          <h5 class="card-header"><strong>{{ proyect.name }}</strong> | 2015 </h5>
+          <div class="card-body">
+            <h5 class="card-title"> GETRONICS - BBVA BANCOMER</h5>
+              <p class="card-text">Diseño de flujos de contratación para productos como consumo preaprobado, seguros e incrementos de línea de crédito; para todos los canales de BBVA Bancomer.</p>
+            <div class="row g-0">
+              <div class="col-5">
+                <img src="/assets/img-one-clic.png" class="img-fluid rounded-start" alt="Imagen del proyecto">
+              </div>
+              <div class="col-7">
+                <div class="px-2">
+                  <p class="card-text">Proyecto: <strong>{{ proyect.name }}</strong></p>
+                  <p class="card-text">Canal: <strong>{{ proyect.canal }}</strong></p>
+                  <p class="card-text">Cliente: </p>
+                  <!-- <p class="card-text"><small class="text-body-secondary">MULTICANAL</small></p> -->
+                  <a [routerLink]="[ '/countries/by', proyect.id]" class="btn btn-outline-primary btn-sm">Más información</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+  </div>
+</ul>

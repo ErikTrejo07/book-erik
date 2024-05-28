@@ -1,0 +1,32 @@
+.main-header {
+	position: relative;
+	background: url(/assets/Fondo-Inicio.jpg);
+	background-size: cover;
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat;
+	min-height: 668px;
+}
+
+/* Estilos para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  .background-image {
+    background-size: contain; /* Ajusta la imagen al tamaño del elemento */
+    background-position: top; /* La imagen de fondo se posiciona en la parte superior */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-image {
+    background-size: auto;
+    background-position: right;
+  }
+}
+
+/* .background-overlay {
+	position: absolute;
+	background: rgba(62, 88, 72, 0.7);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} */

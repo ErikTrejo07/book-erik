@@ -1,0 +1,22 @@
+
+
+<div class="container-fuid">
+
+
+  <div class="row">
+    <div class="col text-center">
+        <!-- SearchBox -->
+        <button *ngFor="let channel of channels"
+          class="btn mx-2"
+          [ngClass]="{ 'btn-outline-primary': selectedChannel === channel }"
+          (click)="searchByChannel(channel)">
+          {{ channel }}
+        </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <proyects-card [proyectList]="proyects"></proyects-card>
+  </div>
+
+</div>

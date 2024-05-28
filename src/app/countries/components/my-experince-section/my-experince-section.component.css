@@ -1,0 +1,67 @@
+@keyframes rellenar {
+  to {
+    stroke-dasharray: var(--porsentaje) 100;
+  }
+}
+
+.h-contenido {
+  min-height: 662px;
+}
+
+nav {
+  height: 60px;
+  padding: 0;
+}
+
+circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-dasharray: 100 100;
+  stroke: rgba(255, 255, 255, 0.5);
+  transform: rotate(-90deg);
+  transform-origin: 50%;
+
+}
+
+/* El segundo circulo es el que se ve encima del anterior y debe tener el color más intenso y el área del porcentaje */
+circle:nth-child(2){
+  stroke: white;
+  stroke-dasharray: 0 100;
+  animation: rellenar .35s linear forwards;
+}
+
+.porcentajes {
+  position: relative;
+}
+
+.porcentajes span {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 25px/1em Avenir;
+}
+
+.experiencia span {
+  font: 12px/1em Avenir;
+  color: #4F4F4F;
+}
+
+.experiencia h5 {
+  font: 14px/1em Avenir;
+  color: #4F4F4F;
+}
+
+.experiencia p {
+  font: 14px/1em Avenir;
+  color: #4F4F4F;
+}
+
+.experiencia ul {
+  font: 14px/1.5em Avenir;
+  color: #4F4F4F;
+}
