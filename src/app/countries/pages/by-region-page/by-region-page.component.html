@@ -1,19 +1,24 @@
 
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand">PROYECTOS </span>
 
-<div class="container-fuid">
-
-
-  <div class="row">
-    <div class="col text-center">
-        <!-- SearchBox -->
-        <button *ngFor="let channel of channels"
-          class="btn mx-2"
-          [ngClass]="{ 'btn-outline-primary': selectedChannel === channel }"
-          (click)="searchByChannel(channel)">
-          {{ channel }}
-        </button>
+    <div class="row">
+      <div class="col text-center">
+          <!-- SearchBox -->
+          <button *ngFor="let channel of channels"
+            class="btn mx-2 text-white"
+            [ngClass]="{ 'btn-outline-light': selectedChannel === channel }"
+            (click)="searchByChannel(channel)">
+            {{ channel }}
+          </button>
+      </div>
     </div>
+
   </div>
+</nav>
+
+<div class="container-fuid m-3">
 
   <div class="row">
     <proyects-card [proyectList]="proyects"></proyects-card>

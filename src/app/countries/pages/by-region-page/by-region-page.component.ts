@@ -11,14 +11,13 @@ import { Channel } from '../../interfaces/channel.type';
 @Component({
   selector: 'app-by-region-page',
   templateUrl: './by-region-page.component.html',
-  styles: [
-  ]
+  styleUrls: ['./by-region-page.component.css'],
 })
 export class ByRegionPageComponent implements OnInit {
 
-  public countries: Country[] = [];
-  public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
-  public selectedRegion?: Region;
+  // public countries: Country[] = [];
+  // public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  // public selectedRegion?: Region;
 
   public proyects2: Proyect[] = [];
   public channels: Channel[] = ['Móvil', 'Web', 'Autoservicio', 'Otros', ''];
