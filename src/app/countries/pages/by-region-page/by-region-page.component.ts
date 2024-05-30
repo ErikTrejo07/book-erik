@@ -19,6 +19,9 @@ export class ByRegionPageComponent implements OnInit {
   // public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
   // public selectedRegion?: Region;
 
+
+
+
   public proyects2: Proyect[] = [];
   public channels: Channel[] = ['Móvil', 'Web', 'Autoservicio', 'Otros', ''];
   public selectedChannel?: Channel;
@@ -47,6 +50,16 @@ export class ByRegionPageComponent implements OnInit {
       ;
 
   }
+
+  onDeleteProyect( id: number ):void {
+    this.countriesService.deleteProyectById( id );
+  }
+
+
+  enviarIdProyect( id: number ):void {
+    this.countriesService.showProyectById( id );
+  }
+
   // ------------------------------------//
 
   // ngOnInit(): void {

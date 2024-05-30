@@ -21,7 +21,7 @@
       <img [src]="country.flags.svg" [alt]="country.name.common" class="img-thumbnail">
     </div>
 
-    <div class="col">
+    <!-- <div class="col">
       <h3>Información</h3>
       <ul class="list-group">
         <li class="list-group-item">
@@ -33,10 +33,10 @@
         <li class="list-group-item">
           <strong>Proyecto:</strong> {{ proyectList }}
         </li>
-      </ul>
+      </ul> -->
 
       <!-- Comienza el for -->
-      <ul class="list-group">
+      <!-- <ul class="list-group">
         <li *ngFor="
           let proyect of proyectList;
           let i = index;
@@ -55,15 +55,16 @@
               <span class="text-primary"> {{ i + 1 }}. </span>
               <span>{{ proyect.name }} - </span>
               <strong>Canal: </strong>
-              <span>{{ proyect.canal }}</span>
-          </div>
+              <span>{{ proyect.channel }}</span>
+          </div> -->
 
           <!-- <button (click)="onDeleteCharacter( proyect.id )" class="btn btn-danger">X</button> -->
-
+<!--
         </li>
       </ul>
 
-    </div>
+    </div>-->
+
   </div>
 
   <div class="row mt-2">
@@ -73,7 +74,7 @@
 
       <div class="d-flex flex-wrap">
 
-        <span class="badge bg-primary m-1">{{ country.translations['ara'].common }}</span>
+        <!-- <span class="badge bg-primary m-1">{{ country.translations['ara'].common }}</span>
         <span class="badge bg-primary m-1">{{ country.translations['bre'].common }}</span>
         <span class="badge bg-primary m-1">{{ country.translations['ces'].common }}</span>
         <span class="badge bg-primary m-1">{{ country.translations['cym'].common }}</span>
@@ -82,7 +83,7 @@
         <span class="badge bg-primary m-1">{{ country.translations['fin'].common }}</span>
         <span class="badge bg-primary m-1">{{ country.translations['ita'].common }}</span>
         <span class="badge bg-primary m-1">{{ country.translations['kor'].common }}</span>
-        <span class="badge bg-primary m-1">{{ country.translations['per'].common }}</span>
+        <span class="badge bg-primary m-1">{{ country.translations['per'].common }}</span> -->
 
       </div>
 

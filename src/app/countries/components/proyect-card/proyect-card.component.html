@@ -15,10 +15,11 @@
               <div class="col-7">
                 <div class="px-2">
                   <p class="card-text">Proyecto: <strong>{{ proyect.name }}</strong></p>
-                  <p class="card-text">Canal: <strong>{{ proyect.canal }}</strong></p>
+                  <p class="card-text">Canal: <strong>{{ proyect.channel }}</strong></p>
                   <p class="card-text">Cliente: </p>
                   <!-- <p class="card-text"><small class="text-body-secondary">MULTICANAL</small></p> -->
-                  <a [routerLink]="[ '/countries/by', proyect.id]" class="btn btn-outline-primary btn-sm">Más información</a>
+                  <button (click)="enviarId(proyect.id)" (click)="sendMessage()" [routerLink]="[ '/countries/by', proyect.id]"  class="btn btn-outline-primary btn-sm">Más información</button>
+                  <button (click)="onDeleteProyect( proyect.id )" class="btn btn-danger">X</button>
                 </div>
               </div>
             </div>

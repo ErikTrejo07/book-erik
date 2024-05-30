@@ -11,7 +11,7 @@ import { Proyect } from '../../interfaces/proyect.interface';
   styles: [
   ]
 })
-export class CountryPageComponent implements OnInit {
+export class CountryPageComponent  { //implements OnInit
 
   public country?: Country;
 
@@ -27,24 +27,26 @@ export class CountryPageComponent implements OnInit {
     return [...this.countriesService.proyects];
   }
 
-  @Input()
-  public proyectList: Proyect[] = [{
-    id: 1,
-    name: 'Trunks',
-    canal: 'ATM'
-  }];
 
-  ngOnInit(): void {
 
-    this.activatedRoute.params
-      .pipe(
-        switchMap( ({ id }) => this.countriesService.searchCountryByAlphaCode( id )),
-      )
-      .subscribe( country => {
-        if ( !country ) return this.router.navigateByUrl('');
-        return this.country = country;
-      });
-  }
+  // @Input()
+  // public proyectList: Proyect[] = [{
+  //   id: 1,
+  //   name: 'Trunks',
+  //   channel: 'ATM'
+  // }];
+
+  // ngOnInit(): void {
+
+  //   this.activatedRoute.params
+  //     .pipe(
+  //       switchMap( ({ id }) => this.countriesService.searchCountryByAlphaCode( id )),
+  //     )
+  //     .subscribe( country => {
+  //       if ( !country ) return this.router.navigateByUrl('');
+  //       return this.country = country;
+  //     });
+  // }
 
 
 

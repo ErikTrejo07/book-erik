@@ -10,10 +10,9 @@ import { Proyect } from 'src/app/countries/interfaces/proyect.interface';
 export class HeaderBarComponent {
 
   @Input()
-  public proyectList: Proyect[] = [{
-    id: 0,
-    name: 'Trunks',
-    canal: 'ATM'
-  }];
+  public proyectList: Proyect[] = [];
+
+  @Input()
+  public index2: number = 0;
 
 }

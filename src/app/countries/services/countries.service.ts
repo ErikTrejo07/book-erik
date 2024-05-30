@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of, map, tap } from 'rxjs';
 
@@ -16,16 +16,21 @@ export class CountriesService {
 
 
   //*********** Código CV ****************/
+
+
   public proyects: Proyect[] = [{
 
     id: 0,
     name: 'Cajero',
-    canal: 'Autosevicio'
+    channel: 'Autosevicio'
   },{
     id: 1,
     name: 'Línea Bancomer',
-    canal: 'Móvil'
+    channel: 'Móvil'
   }];
+
+
+
 
   private apiUrl: string = JSON.stringify( this.proyects );
 
@@ -51,15 +56,24 @@ export class CountriesService {
       // );
   }
 
-  searchCountryByAlphaCode( code: string ): Observable<Country | null> {
+  searchCountryByAlphaCode( code: string ): Observable<Proyect | null> {
 
     const url = `${ this.apiUrl }/alpha/${ code }`;
 
-    return this.http.get<Country[]>( url )
+    return this.http.get<Proyect[]>( url )
       .pipe(
-        map( countries => countries.length > 0 ? countries[0]: null ),
+        map( proyects => proyects.length > 0 ? proyects[0]: null ),
         catchError( () => of(null) )
       );
+  }
+
+
+  deleteProyectById( id:number ) {
+    this.proyects = this.proyects.filter( proyects => proyects.id !== id );
+  }
+
+  showProyectById( id:number ) {
+    this.proyects[id].id = id;
   }
 
   //*********** Termina código CV ***************/

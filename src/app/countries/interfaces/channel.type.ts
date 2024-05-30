@@ -1,3 +1,3 @@
 
 
-export type Channel = 'Móvil'|'Web'|'Autoservicio'|'Otros'|'';
+export type Channel = 'Todos'|'Móvil'|'Web'|'Autoservicio'|'Otros'|'';

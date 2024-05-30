@@ -21,7 +21,9 @@
 <div class="container-fuid m-3">
 
   <div class="row">
-    <proyects-card [proyectList]="proyects"></proyects-card>
+    <proyects-card [proyectList]="proyects"
+
+                    (onDelete)="onDeleteProyect($event)"></proyects-card> <!-- (enviarId)="enviarIdProyect($event)" -->
   </div>
 
 </div>
