@@ -72,17 +72,59 @@
     </div>
   </div>
 
-  <div class="row">
+  <div *ngIf="proyects[index2].solutionTitle01" class="row mt-3">
     <div>
-      <h5><strong>Solución final</strong></h5> <!-- {{ proyects[index2].solutionTitle[1] }} -->
+      <h5><strong>{{ proyects[index2].solutionTitle01 }}</strong></h5>
       <br>
-      <p *ngIf="proyects[index2].lgDescription01">{{ proyects[index2].lgDescription01}} </p> <!-- {{ proyects[index2].solutionText[1] }} -->
+      <p *ngIf="proyects[index2].solutionText01">{{ proyects[index2].solutionText01 }} </p>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-6 col-sm-4 col-md-3">
-      <img [src]="proyects[index2].coverImg" class="img-fluid mb-2" alt="Imagen del proyecto">
+  <div *ngIf="proyects[index2].solutionImg01" class="row">
+    <div *ngFor="let image of proyects[index2].solutionImg01;" class="col-6 col-sm-4 col-md-3">
+      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
+    </div>
+  </div>
+
+  <div *ngIf="proyects[index2].solutionTitle02" class="row mt-3">
+    <div>
+      <h5><strong>{{ proyects[index2].solutionTitle02 }}</strong></h5>
+      <br>
+      <p *ngIf="proyects[index2].solutionText02">{{ proyects[index2].solutionText02 }} </p>
+    </div>
+  </div>
+
+  <div *ngIf="proyects[index2].solutionImg02" class="row">
+    <div *ngFor="let image of proyects[index2].solutionImg02;" class="col-6 col-sm-4 col-md-3">
+      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
+    </div>
+  </div>
+
+  <div *ngIf="proyects[index2].solutionTitle03" class="row mt-3">
+    <div>
+      <h5><strong>{{ proyects[index2].solutionTitle03 }}</strong></h5>
+      <br>
+      <p *ngIf="proyects[index2].solutionText03">{{ proyects[index2].solutionText03 }} </p>
+    </div>
+  </div>
+
+  <div *ngIf="proyects[index2].solutionImg03" class="row">
+    <div *ngFor="let image of proyects[index2].solutionImg03;" class="col-6 col-sm-4 col-md-3">
+      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
+    </div>
+  </div>
+
+  <div *ngIf="proyects[index2].solutionTitle04" class="row mt-3">
+    <div>
+      <h5><strong>{{ proyects[index2].solutionTitle04 }}</strong></h5>
+      <br>
+      <p *ngIf="proyects[index2].solutionText04">{{ proyects[index2].solutionText04 }} </p>
+    </div>
+  </div>
+
+  <div *ngIf="proyects[index2].solutionImg04" class="row">
+    <div *ngFor="let image of proyects[index2].solutionImg04;" class="col-6 col-sm-4 col-md-3">
+      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
     </div>
   </div>
 
