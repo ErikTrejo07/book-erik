@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Proyect } from '../../interfaces/proyect.interface';
+import { Channel } from '../../interfaces/channel.type';
+import { CountriesService } from '../../services/countries.service';
 
 @Component({
   selector: 'proyects-card',
@@ -8,61 +10,34 @@ import { Proyect } from '../../interfaces/proyect.interface';
   styleUrls: ['./proyect-card.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProyectCardComponent {
+export class ProyectCardComponent  {
+
+  constructor(
+  ) {
+    //this.loadChannelLocalStorage();
+  }
 
   public index: number = 0;
   public index3: string = ''
+  public selectedChanel: string = 'Autoservicio';
+
+  // ngOnInit(): void {
+  //   //   this.countries = this.countriesService.cacheStore.byRegion.countries;
+  //   //   this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
+  //     this.channelSelected = this.countriesService.channelSelected;
+  //    }
 
   @Input()
   public proyectList: Proyect[] = [];
 
-  // public proyect: Proyect = {
-  //   id: 0,
-  //   name:'',
-  //   channel:''
-  // }
-
-  // onDelete = Index value : number
-  @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
-
-
-  onDeleteProyect( id?: number ):void {
-
-    if ( !id ) return;
-    this.onDelete.emit( id );
-
-    console.log(id);
-    console.log(this.proyectList)
-
-  }
-
-  @Output()
-  public valorEmitido: EventEmitter<number> = new EventEmitter();
-
-
   enviarId(id?: number):void {
 
     if ( !id ) return;
-    this.valorEmitido.emit(id);
     this.index3 = id.toString();
 
-    console.log(id);
-    console.log(this.proyectList)
   }
 
-
-
-
-  public message: string = "Hola Mundo!";
-
-  @Output()
-  public messageEvent = new EventEmitter<string>();
-
-  constructor() {}
-
   sendMessage() {
-    this.messageEvent.emit(this.message);
     this.saveIdLocalStorage();
   }
 
@@ -70,6 +45,19 @@ export class ProyectCardComponent {
     localStorage.setItem('history', this.index3)
   }
 
+
+  // --------------intento de mandar canal por local storage ---------
+  // private loadChannelLocalStorage():void {
+  //   if( !localStorage.getItem('channel') ) return;
+  //   this.channelSelected = localStorage.getItem('channel')!;
+
+  //   console.log('Canal seleccionado: ',this.channelSelected);
+
+  // }
+
+  // -------- intento de mandar canal input ---------
+  // @Input()
+  // public channelSelected2: string = 'Móvil';
 
 
 }

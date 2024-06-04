@@ -13,18 +13,12 @@ import { Channel } from '../../interfaces/channel.type';
   templateUrl: './by-region-page.component.html',
   styleUrls: ['./by-region-page.component.css'],
 })
-export class ByRegionPageComponent implements OnInit {
-
-  // public countries: Country[] = [];
-  // public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
-  // public selectedRegion?: Region;
-
-
-
+export class ByRegionPageComponent  implements OnInit {
 
   public proyects2: Proyect[] = [];
-  public channels: Channel[] = ['Móvil', 'Web', 'Autoservicio', 'Otros', ''];
-  public selectedChannel?: Channel;
+  public channels: Channel[] = ['Todos','Móvil', 'Web', 'Autoservicio', 'Otros', ''];
+  // public selectedChannel?: Channel;
+  public channelSelected: string = 'Todos'
 
   constructor( private countriesService: CountriesService ) {}
 
@@ -34,38 +28,50 @@ export class ByRegionPageComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
+  //ngOnInit(): void {
     // this.proyects = this.countriesService.cacheStore.byRegion.proyects;
     // this.selectedChannel = this.countriesService.cacheStore.byRegion.channel;
-  }
+  //}
 
   searchByChannel( channel: Channel ):void  {
 
-    this.selectedChannel = channel;
+    this.channelSelected = channel;
 
-    this.countriesService.searchChannel( channel )
-      // .subscribe( proyects => {
-      //   this.proyects = proyects;
-      // });
-      ;
+    // this.countriesService.searchChannel( channel )
+    //   .subscribe( proyects => {
+    //     this.proyects = proyects;
+    //   });
+    //   ;
 
   }
 
-  onDeleteProyect( id: number ):void {
-    this.countriesService.deleteProyectById( id );
+  setChannel( channel: Channel ):void {
+
+    if ( !channel ) return;
+    this.channelSelected = channel;
+
+    console.log(this.channelSelected);
+    this.saveChannelLocalStorage();
+
+  }
+
+  // sendMessage() {
+  //   this.saveChannelLocalStorage();
+  // }
+
+  private saveChannelLocalStorage():void {
+    localStorage.setItem('channel', this.channelSelected);
   }
 
 
-  enviarIdProyect( id: number ):void {
-    this.countriesService.showProyectById( id );
-  }
 
   // ------------------------------------//
 
-  // ngOnInit(): void {
+   ngOnInit(): void {
   //   this.countries = this.countriesService.cacheStore.byRegion.countries;
   //   this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
-  // }
+   // this.channelSelected = this.countriesService.channelSelected;
+   }
 
   // searchByRegion( region: Region ):void  {
 

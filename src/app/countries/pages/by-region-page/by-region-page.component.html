@@ -8,8 +8,8 @@
           <!-- SearchBox -->
           <button *ngFor="let channel of channels"
             class="btn mx-2 text-white"
-            [ngClass]="{ 'btn-outline-light': selectedChannel === channel }"
-            (click)="searchByChannel(channel)">
+            [ngClass]="{ 'btn-outline-light': channelSelected === channel }"
+            (click)="setChannel(channel)">
             {{ channel }}
           </button>
       </div>
@@ -22,8 +22,7 @@
 
   <div class="row">
     <proyects-card [proyectList]="proyects"
-
-                    (onDelete)="onDeleteProyect($event)"></proyects-card> <!-- (enviarId)="enviarIdProyect($event)" -->
+                   ></proyects-card>
   </div>
 
 </div>

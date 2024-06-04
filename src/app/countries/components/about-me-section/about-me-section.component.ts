@@ -6,4 +6,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './about-me-section.component.html',
   styleUrls: ['./about-me-section.component.css'],
 })
-export class AboutMeSectionComponent { }
+export class AboutMeSectionComponent {
+
+
+
+}

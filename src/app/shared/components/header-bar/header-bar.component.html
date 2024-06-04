@@ -1,37 +1,16 @@
-<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar fixed-top  navbar-dark bg-dark">
   <div class="container-fluid">
+    <span class="navbar-brand"> {{ proyects[index2].name | uppercase }} | {{ proyects[index2].year }} </span>
 
-
-    <ul>
-      <div *ngFor="
-        let proyect of proyectList;
-        let i = index;
-        let isFirst = first;
-        let isLast = last;
-        let isEven = even;
-        let isOdd = odd;
-      "
-        class="list-group-item d-flex justify-content-between align-items-center"
-        [ngClass]="{
-          'list-group-item-dark': isLast,
-          'list-group-item-primary': isEven
-        }">
-
-
-        <a *ngIf="i === 1" class="navbar-brand" href="#">{{ proyect.name }} </a>
-
-
-
+      <div>
+        <button routerLink="countries/by-capital" class="btn btn-primary" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        </button>
       </div>
-    </ul>
-
-    <div>
-      <button routerLink="countries/by-capital" class="btn btn-primary" type="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-        </svg>
-      </button>
-    </div>
 
   </div>
 </nav>
+
+

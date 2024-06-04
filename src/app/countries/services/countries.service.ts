@@ -1,10 +1,7 @@
 import { Injectable, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, of, map, tap } from 'rxjs';
 
-import { Country } from '../interfaces/country';
 import { CacheStore } from '../interfaces/cache-store.interface';
-import { Region } from '../interfaces/region.type';
 import { Proyect } from '../interfaces/proyect.interface';
 import { Channel } from '../interfaces/channel.type';
 
@@ -12,142 +9,606 @@ import { Channel } from '../interfaces/channel.type';
 export class CountriesService {
 
   // private apiUrl: string = 'https://restcountries.com/v3.1';
+  //channelSelected: string = 'Todos';
 
-
-
-  //*********** Código CV ****************/
 
 
   public proyects: Proyect[] = [{
 
     id: 0,
-    name: 'Cajero',
-    channel: 'Autosevicio'
+    name: 'Cambio de imagen Cajeros Automáticos',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2012 - 214',
+    channel: 'Autosevicio',
+    shDescription: 'Diseño del cambio de imagen de los ATM’s de BBVA, diseñando componentes más simples y copies más claros.',
+    lgDescription01: 'En este momento, BBVA Bancomer llevaba a cabo la transformación de la imagen y la experiencia en todos sus canales, tanto físicos como digitales.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño del cambio de imagen de los ATM’s de BBVA, diseñando componentes más simples y copies más claros.',
+    lgDescription03: 'Como conclusión del proyecto, a lo largo de 3 años, logramos diseñar una interfaz única en el mercado de autoservicio mexicano, que otorga una experiencia más amigable y completa en los ATM’s.',
+    lgDescription04: '',
+    coverImg: '/assets/img-nueva-imagen.jpg',
+    device: 'Cajero',
+    tool: 'Adobe flash (Animate)',
+    problematic01: 'Los usuarios pasaban mucho tiempo en el cajero y había filas muy largas.',
+    problematic02: 'Los cajeros no eran intuitivos y ni nada amigables, esto probocaba que los usuarios tuvieran miedo de usarlos.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes con nómina BBVA Bancomer',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
   },{
     id: 1,
-    name: 'Línea Bancomer',
-    channel: 'Móvil'
+    name: 'Comprobante digital',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2013',
+    channel: 'Autosevicio',
+    shDescription: 'Diseño del funcionamiento y experiencia para el envío de comprobantes digitales y contratación de notificaciones por correo y SMS.',
+    lgDescription01: 'BBVA Bancomer es una empresa responsable con el medio ambiente y en ese momento el área de cajeros generaba mucha basura, por los comprobantes que tenían que imprimir los ATM’s y Practicajas; por lo tanto se necesitaba una solución para enviar comprobantes de manera digital.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño del flujo de activación de notificaciones por correo y SMS.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una experiencia única en el mercado de autoservicio mexicano, para incentivar a los clientes a cambiar sus comprobantes impresos, por comprobantes digitales.',
+    lgDescription04: '',
+    coverImg: '/assets/img-eliminar-comprobante.jpg',
+    device: 'Cajero',
+    tool: 'Adobe flash (Animate)',
+    problematic01: 'Los usuarios tiraban sus comprobantes en el suelo de la sucursal.',
+    problematic02: 'Muchos usuarios no habían contratado Alertas Bancomer y/o notificaciones por correo electrónico.',
+    problematic03: 'Se necesitaba generar conciencia en los clientes para que prefirieran comprobantes digitales.',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes sin Alertas Bancomer (SMS)',
+    target02: 'Clientes sin notificaciones por correo activas',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 2,
+    name: 'Diseño del sistema de turnos (Podio) ',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2013',
+    channel: 'Autosevicio',
+    shDescription: 'BBVA Bancomer necesitaba un Podio para otorgar turnos en sus nuevas sucursales, donde se pudiera diferenciar a los clientes y se pudiera elegir la operación que fueran a realizar.',
+    lgDescription01: 'BBVA Bancomer necesitaba un Podio para otorgar turnos en sus nuevas sucursales, donde se pudiera diferenciar a los clientes y se pudiera elegir la operación que fueran a realizar.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño del nuevo Podio que se ocuparía en las nuevas sucursales de BBVA Bancomer.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una experiencia única en el mercado financiero mexicano, para que los clientes pudieran tomar un turno deslizando su tarjeta de cualquier producto de BBVA.',
+    lgDescription04: '',
+    coverImg: '/assets/img-podio.jpg',
+    device: 'Podio',
+    tool: 'Adobe flash (Animate)',
+    problematic01: 'Se necesitaba identificar las diferentes operaciones que se pueden realizar en sucursal.',
+    problematic02: 'Se necesitaba identificar los diferentes tipos de clientes y los clientes de BBVA Bancomer.',
+    problematic03: 'Se necesitaba diseñar sobre un formato vertical y tamaño de pantalla nuevo, que no se tenía platillas y componentes.',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes que asisten a sucursal',
+    target02: 'No clientes que asisten a sucursales de BBVA Bancomer',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 3,
+    name: 'Depósito de cheques',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2014',
+    channel: 'Autosevicio',
+    shDescription: 'Esta funcionalidad es poco conocida, pero desde el 2014, en las Practicajas de BBVA Bancomer, se pueden hacer depósitos con cheques.',
+    lgDescription01: 'BBVA Bancomer necesitaba un canal de autoservicio, donde los clientes pudiera cobrar sus cheques, depositando a su cuenta.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de una nueva funcionalidad en Practicajas, que es poco conocida, pero desde el 2014, se pueden hacer depósitos con cheques.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una experiencia única en el mercado financiero mexicano, para que los clientes pudieran cobrar sus cheques en el área de autoservicio de BBVA Bancomer, en cualquier horario, los 365 días del año.',
+    lgDescription04: '',
+    coverImg: '/assets/img-cheques.jpg',
+    device: 'Practicaja',
+    tool: 'Adobe flash (Animate)',
+    problematic01: 'Se necesitaba ampliar el horario de servicio para la atención del cobro de cheques.',
+    problematic02: 'Se necesitaba diseñar un flujo simple y sencillo de pocos pasos, para el cobro de cheques en el área de autoservicio.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes que reciben cheques de BBVA Bancomer',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 4,
+    name: 'Oneclic',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2015',
+    channel: 'Todos',
+    shDescription: 'Diseño de flujos de contratación para productos como consumo preaprobado, seguros e incrementos de línea de crédito; para todos los canales de BBVA Bancomer.',
+    lgDescription01: 'BBVA Bancomer necesitaba ofrecer sus productos, donde los clientes pudieran contratarlos de una forma fácil y sencilla, casi que con un solo clic.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de flujos de contratación de productos como consumo preaprobado, seguros e incrementos de línea.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una experiencia para el mercado financiero mexicano, en la que los clientes podían contratar productos oneclic, de forma rápida, sencilla y en cualquier canal de BBVA Bancomer.',
+    lgDescription04: '',
+    coverImg: '/assets/img-one-clic.png',
+    device: 'Multicanal',
+    tool: 'Adobe flash (Animate), Illustrator',
+    problematic01: 'Se necesitaba diseñar flujos de contratación de productos para todos los canales de BBVA Bancomer.',
+    problematic02: 'Además de los flujos, se necesitaba crear una nueva sección en el menú de todos los canales para ofertarlos.',
+    problematic03: 'El reto es que el número de productos y los productos ofertados tenían que ser diferentes para cada cliente.',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes con nómina en BBVA Bancomer',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 5,
+    name: 'Sistema GUIA',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2015',
+    channel: 'Web',
+    shDescription: 'Diseño del sistema completo del inventario, venta y adquisición de inmuebles por parte de BBVA Bancomer.',
+    lgDescription01: 'BBVA Bancomer necesitaba rediseñar el sistema de gestión de inmuebles, donde la organización puede llevar el registro de adquisición y venta de los mismos.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño del sistema GUIA que constaba de mucha información y muchas tablas.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una experiencia bastante mejorada de la versión anterior, muy limpia y muy elegante. En esta versión era más legible la información.',
+    lgDescription04: '',
+    coverImg: '/assets/img-guia.jpg',
+    device: 'Web',
+    tool: 'Illustrator',
+    problematic01: 'Se necesitaba diseñar flujos de todo el sistema.',
+    problematic02: 'Además de hacer mejoras de usabilidad para facilitar la operación.',
+    problematic03: 'Era necesario organizar el contenido para mejorar la legibilidad.',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Consultor de BBVA Bancomer',
+    target02: 'Encargado de ventas de BBVA Bancomer',
+    target03: 'Administrador de inventarios de BBVA Bancomer',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 6,
+    name: 'Rediseño App Línea Bancomer',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2016',
+    channel: 'Móvil',
+    shDescription: 'Rediseño de la app Línea Bancomer, agregando funcionalidades innovadoras para ayudar a los clientes: GPS de Cajeros y sucursales con medidor de afluencia, Recuperación de NIP. ',
+    lgDescription01: 'BBVA Bancomer necesitaba una app que ayudara a los clientes a acceder, más rápido y fácil, a la opción de atención a clientes Línea Bancomer.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de la experiencia de la app Línea Bancomer, para dar a conocer el número de atención a clientes y las redes sociales oficiales de BBVA Bancomer.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una aplicación que lograba ayudar a los clientes a resolver ciertas dudas que tenía con sus productos de manera autoservicio y 100% digital.',
+    lgDescription04: 'Logramos un producto, que sin llamar a la Línea Bancomer, el cliente pudiera consultar el NIP de sus tarjetas, bloquearlas por perdida o robo, tramitar su reposición y hasta levantar una aclaración de cargos no reconocidos.',
+    coverImg: '/assets/img-linea-bancomer.jpg',
+    device: 'Móvil',
+    tool: 'Illustrator',
+    problematic01: 'Los clientes esperan de 20 a 40 minutos antes de poder ser atendidos, entre que encuentran la opción en el menú, se autentican y esperan la disponibilidad de un asesor.',
+    problematic02: 'Línea Bancomer recibe muchas llamadas diarias.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes de BBVA Bancomer que llaman regularmente a Línea Bancomer',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 7,
+    name: 'Distinción Patrimonial',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2016',
+    channel: 'Móvil',
+    shDescription: 'Diseño de la app Banca móvil para el segmento patrimonial de BBVA Bancomer.',
+    lgDescription01: 'En este proyecto se necesitaba una experiencia diferenciada en la banca móvil móvil para los segmentos altos de clientes, como patrimonial, privada y UHN.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de un apartado de la app Banca móvil para el segmento alto de BBVA Bancomer, donde puedan consultar los saldos de sus cuentas y contratos patrimoniales.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una nueva funcionalidad para brindar una experiencia única a los clientes patrimoniales, con la facultad de consultar sus contratos patrimoniales.',
+    lgDescription04: '',
+    coverImg: '/assets/img-patrimonial.jpg',
+    device: 'Móvil',
+    tool: 'Illustrator',
+    problematic01: 'Se necesita diferenciar los segmentos de clientes, patrimonial, privado y UHN.',
+    problematic02: 'Se requiere consultar contratos patrimoniales.',
+    problematic03: 'Se requiere una opción para tener contacto con el asesor patrimonial: Poder llamar, mandar mensaje, correo o agendar una cita.',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes del segmento patrimonial',
+    target02: 'Clientes del segmento privado',
+    target03: 'Clientes del segmento UHN',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 8,
+    name: 'Diseño App TDC Empresarial',
+    company:'Getronics',
+    customer: 'BBVA Bancomer',
+    year: '2016',
+    channel: 'Móvil',
+    shDescription: 'Diseño de la app Tarjeta de crédito empresarial, para gestionar viajes y registro de facturas para uso interno de los colaboradores de BBVA Bancomer.',
+    lgDescription01: 'BBVA Bancomer necesitaba una plataforma para que los colaboradores puedan conocer rutas, horarios y lista de espera para uso interno.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de la app Transporte corporativo, una plataforma innovadora diseñada con el brand corporativo, para otorgarle un buen servicio de transporte al colaborador.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una aplicación que logra brindar el servicio de transporte, para que los colaboradores se puedan trasladar de su casa al trabajo y de regreso, de una forma fácil y segura.',
+    lgDescription04: '',
+    coverImg: '/assets/img-tdc-empresarial.jpg',
+    device: 'Móvil',
+    tool: 'Illustrator',
+    problematic01: 'Se necesita dar a conocer las rutas y horarios del transporte corporativo que ofrece BBVA Bancomer para sus colaboradores.',
+    problematic02: 'Se requiere que los colaboradores puedan apartar su lugar en la ruta y horario de su preferencia para poder abordar un vehículo.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Colaboradores de BBVA Bancomer',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 9,
+    name: 'Sistema Único de Controversias',
+    company:'TATA Consultancy Services',
+    customer: 'E-global',
+    year: '2017',
+    channel: 'Web',
+    shDescription: 'Diseño y programación front del sistema para resolver las aclaraciones que los clientes hacen a los bancos por cargos no reconocidos detectados en sus tarjetas bancarias.',
+    lgDescription01: 'E-global necesitaba centralizar todas sus operaciones en un sólo sistema que pudiera atender a todos sus clientes de forma homologada y llevar la contabilidad.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño y la programación front del sistema para resolver las aclaraciones que los clientes hacen a los bancos por cargos no reconocidos detectados en sus tarjetas bancarias.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una aplicación que puede dar servicio para resolver las controversias que puedan existir entre emisores y adquirentes.',
+    lgDescription04: '',
+    coverImg: '/assets/img-suc.jpg',
+    device: 'Web',
+    tool: 'Sketch, HTML',
+    problematic01: 'Se necesita centralizar y automatizar ciertos procesos de operación en la atención de controversias.',
+    problematic02: 'Se requiere que llevar la contabilidad de los servicios otorgados a cada cliente.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Operador de E-global',
+    target02: 'Contadores de E-global',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 10,
+    name: 'App Transporte corporativo',
+    company:'TATA Consultancy Services',
+    customer: 'BBVA Bancomer',
+    year: '2017',
+    channel: 'Móvil',
+    shDescription: 'Diseño de la app Transporte corporativo, para conocer rutas, horarios y lista de espera para uso interno de los colaboradores de BBVA Bancomer.',
+    lgDescription01: 'BBVA Bancomer necesitaba una plataforma para que los colaboradores puedan conocer rutas, horarios y lista de espera para uso interno.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de la app Transporte corporativo, una plataforma innovadora diseñada con el brand corporativo, para otorgarle un buen servicio de transporte al colaborador.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una aplicación que logra brindar el servicio de transporte, para que los colaboradores se puedan trasladar de su casa al trabajo y de regreso, de una forma fácil y segura.',
+    lgDescription04: '',
+    coverImg: '/assets/img-transporte-corp.jpg',
+    device: 'Móvil',
+    tool: 'Sketch, Marvel, Zeplin, HTML',
+    problematic01: 'Se necesita dar a conocer las rutas y horarios del transporte corporativo que ofrece BBVA Bancomer para sus colaboradores.',
+    problematic02: 'Se requiere que los colaboradores puedan apartar su lugar en la ruta y horario de su preferencia para poder abordar un vehículo.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Colaboradores de BBVA Bancomer',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 11,
+    name: 'App Bhappy',
+    company:'TATA Consultancy Services',
+    customer: 'BBVA Bancomer',
+    year: '2017 - 2018',
+    channel: 'Móvil',
+    shDescription: 'Diseño de la app Bhappy, para conocer el estado de animo de las personas, para uso interno de los colaboradores de BBVA Bancomer.',
+    lgDescription01: 'BBVA Bancomer necesitaba una plataforma para conocer el estado de ánimo de sus colaboradores y poder tomar acciones al identificar personas con estados de ánimo, canalizando a cada colaborador a actividades recreativas.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de la experiencia de una app Bhappy, para conocer el estado de animo de las personas.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una aplicación que logra acercar a las personas, haciendo una comunidad dentro de la organización.',
+    lgDescription04: 'Logramos un producto que integrará a los colaboradores, invitando y dando a conocer a las actividades recreativas que ofrece BBVA Bancomer.',
+    coverImg: '/assets/img-bhappy.jpg',
+    device: 'Móvil',
+    tool: 'Sketch, Marvel, Zeplin, HTML',
+    problematic01: 'Se necesita identificar el estado de ánimo de los colaboradores y conocer la media por área o proyecto.',
+    problematic02: 'Se requiere dar a conocer las actividades recreativas que ofrece BBVA para los colaboradores.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Colaboradores de BBVA Bancomer',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 12,
+    name: 'A2CENSO',
+    company:'TATA Consultancy Services',
+    customer: 'BVC Colombia',
+    year: '2019',
+    channel: 'Web',
+    shDescription: 'Lideré el diseño y la experiencia del sitio web para la experiencia de una plataforma de crowdfunding.',
+    lgDescription01: 'La Bolsa de Valores de Colombia (BVC), necesita una plataforma de financiamiento colectivo (crowdfunding), para conectar a las empresas que necesitan capital de inversión con los inversionistas.',
+    lgDescription02: 'En este proyecto tuve la oportunidad de liderear el diseño y la experiencia del sitio web para la plataforma de crowdfunding.',
+    lgDescription03: 'Como conclusión del proyecto logramos diseñar una aplicación líder en el mercado colombiano que logra acercar a las pequeñas y medianas empresas con los inversionistas.',
+    lgDescription04: 'Logramos un producto que integrará los distintos tipos de usuario, las empresas necesitaban inscribir su proyecto y los aportadores podrán elegir los distintos proyectos disponibles en los cuales quieran invertir.',
+    coverImg: '/assets/img-a2censo.jpg',
+    device: 'Web',
+    tool: 'Sketch, Marvel, Zeplin',
+    problematic01: 'Las PyMEs necesitan un canal digital donde puedan solicitar inversión y también dar a conocer su proyecto a los interesados a invertir.',
+    problematic02: 'Se requiere un catálogo digital, regulado, donde inversionistas puedan elegir proyectos para un financiamiento colectivo.',
+    problematic03: '',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Emisores',
+    target02: 'Inversionistas',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 13,
+    name: 'Módulo OTP Transversal',
+    company:'TATA Consultancy Services',
+    customer: 'Scotiabank',
+    year: '2020',
+    channel: 'Todos',
+    shDescription: 'Diseño de la experiencia única y homologada, para el proceso de contraseñas dinámicas en todos los productos de Scotiabank.',
+    lgDescription01: 'Tuve la oportunidad de participar en el diseño de la experiencia única y homologada, para el proceso de contraseñas dinámicas en todos los productos de Scotiabank.',
+    lgDescription02: 'En ese momento, Scotiabank utilizaba códigos OTP para la autenticación y verificación de sus clientes, pero la experiencia no era la misma en los diferentes canales que se utilizaba.',
+    lgDescription03: 'Se diseñó un flujo que pudiera ser más simple y que estuviera homologado en los canales web y móvil.',
+    lgDescription04: '',
+    coverImg: '/assets/img-otp.jpg',
+    device: 'Multicanal',
+    tool: 'Sketch, InVision, Zeplin',
+    problematic01: 'Cada producto tiene diferentes elementos, tanto textos como imágenes.',
+    problematic02: 'No hay reglas de negocio estándar.',
+    problematic03: 'Tiene mucho texto de contenido.',
+    problematic04: 'Ninguna de las experiencias se puede reutilizar porque tiene textos muy específicos.',
+    problematic05: 'Algunos elementos están fuera de las reglas del equipo UX de ese momento.',
+    target01: 'Clientes que utilizan la banca digital de Scotiabank',
+    target02: '',
+    target03: '',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 14,
+    name: 'Cuenta Única N2 Exprés',
+    company:'TATA Consultancy Services',
+    customer: 'Scotiabank',
+    year: '2020',
+    channel: 'Web',
+    shDescription: 'Diseño de una experiencia diferenciada para clientes existentes en Scotiabank, para la contratación de una Cuenta Digital N2, donde el proceso sea completado en menor tiempo.',
+    lgDescription01: 'Tuve la oportunidad de participar en el diseño de una experiencia diferenciada para clientes existentes en Scotiabank, para la contratación de una Cuenta Digital N2.',
+    lgDescription02: 'Como conclusión del proyecto logramos desarrollar un proceso de apertura muy rápido, en solo 9 clics.',
+    lgDescription03: '',
+    lgDescription04: '',
+    coverImg: '/assets/img-n2-digital.jpg',
+    device: 'Web',
+    tool: 'Sketch, InVision, Zeplin, Figma',
+    problematic01: 'Actualmente no se cuenta con un flujo para clientes. Si un cliente ingresa a la contratación de Cuenta Digital, tiene que ingresar todos sus datos, cuando se supone que Scotiabank ya los tiene.',
+    problematic02: 'Se requiere una experiencia diferenciada para clientes existentes de Scotiabank, para la contratación de una Cuenta Digital N2, donde la apertura sea completada en menor tiempo a diferencia de un nuevo cliente.',
+    problematic03: 'Se pretende que el diseño de este flujo sea transversal y otros productos puedan utilizarlo para ofrecer la misma experiencia a todos nuestros clientes.',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Clientes monoproducto de auto',
+    target02: 'Clientes monoproducto de TDC',
+    target03: 'Clientes multiprodcuto (Crédito + débito)',
+    target04: '',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
+  },{
+    id: 15,
+    name: 'Reingeniería sistema OCRA',
+    company:'GFT',
+    customer: 'AMIS',
+    year: '2021 - 2022',
+    channel: 'Web',
+    shDescription: 'Lideré el diseño para el sitio web de la plataforma de control de robos y recuperación de vehículos única en México.',
+    lgDescription01: 'AMIS, es la Asociación Mexicana de Instituciones de Seguros y tiene la necesidad de renovar el sistema OCRA Virtual, pues ya lleva más de 10 años de operación y sus tiempos de respuesta son muy lentos.',
+    lgDescription02: 'Tuve la oportunidad de liderar el diseño para el sitio web, para el rediseño completo de este sistema, para el control de robos y recuperación de vehículos única en México.',
+    lgDescription03: 'Como conclusión del proyecto logramos desarrollar una aplicación única en México con elementos innovadores y prácticos, que responden a las necesidades específicas de nuestro cliente.',
+    lgDescription04: 'Logramos un producto visualmente atractivo y fácil de usar.',
+    coverImg: '/assets/img-ocra.jpg',
+    device: 'Web',
+    tool: 'Figma',
+    problematic01: 'Actualmente, AMIS ya siente obsoleto el sistema OCRA Virtual, pues ya lleva más de 10 años de operación y sus tiempos de respuesta son muy lentos.',
+    problematic02: 'AMIS recibe solicitudes constantes de mejoras y cambios por parte de los usuarios finales.',
+    problematic03: 'Se requiere automatizar procesos que actualmente se hacen de forma manual.',
+    problematic04: '',
+    problematic05: '',
+    target01: 'Usuario de AMIS',
+    target02: 'Usuario de OCRA',
+    target03: 'Usuario de Compañías aseguradoras',
+    target04: 'Usuarios de Autoridades',
+    solutionTitle01: 'Antes',
+    solutionText01: '',
+    solutionImg01: ['/assets/img-atm1-01.jpg','/assets/img-atm1-02.jpg','/assets/img-atm1-03.jpg','/assets/img-atm1-04.jpg'],
+    solutionTitle02: '',
+    solutionText02: '',
+    solutionImg02: [],
+    solutionTitle03: '',
+    solutionText03: '',
+    solutionImg03: [],
+    solutionTitle04: '',
+    solutionText04: '',
+    solutionImg04: [],
   }];
 
-
-
-
-  private apiUrl: string = JSON.stringify( this.proyects );
-
-  // public cacheStore: CacheStore = {
-  //   byRegion: { channel: '', channels: [] },
-  // }
-
-  private getProyectsRequest( url: string ): Observable<Proyect[]> {
-    return this.http.get<Proyect[]>( url )
-      .pipe(
-        catchError( () => of([]) ),
-        // delay( 2000 ),
-      );
-  }
-
-  searchChannel( channel: Channel ): Observable<Proyect[]> {
-
-    const url = `${ this.proyects }/channel/${ channel }`;
-    return this.getProyectsRequest(url)
-      // .pipe(
-      //   tap( proyects => this.cacheStore.byRegion = { channel, proyects }),
-      //   tap( () => this.saveToLocalStorage() ),
-      // );
-  }
-
-  searchCountryByAlphaCode( code: string ): Observable<Proyect | null> {
-
-    const url = `${ this.apiUrl }/alpha/${ code }`;
-
-    return this.http.get<Proyect[]>( url )
-      .pipe(
-        map( proyects => proyects.length > 0 ? proyects[0]: null ),
-        catchError( () => of(null) )
-      );
-  }
-
-
-  deleteProyectById( id:number ) {
-    this.proyects = this.proyects.filter( proyects => proyects.id !== id );
-  }
 
   showProyectById( id:number ) {
     this.proyects[id].id = id;
   }
 
-  //*********** Termina código CV ***************/
 
-
-  // public cacheStore: CacheStore = {
-  //   byCapital:   { term: '', countries: [] },
-  //   byCountries: { term: '', countries: [] },
-  //   byRegion:    { region: '', countries: [] },
-  // }
 
   constructor(private http: HttpClient ) {
-  //   this.loadFromLocalStorage();
+     //this.loadFromLocalStorage();
   }
 
-  // private saveToLocalStorage() {
-  //   localStorage.setItem( 'cacheStore', JSON.stringify( this.cacheStore ));
-  // }
 
   // private loadFromLocalStorage() {
-  //   if ( !localStorage.getItem('cacheStore') ) return;
+  //   if ( !localStorage.getItem('channel') ) return;
 
-  //   this.cacheStore = JSON.parse( localStorage.getItem('cacheStore')! );
+  //   this.channelSelected = localStorage.getItem('channel')!;
+
   // }
-
-  // private getCountriesRequest( url: string ): Observable<Country[]> {
-  //   return this.http.get<Country[]>( url )
-  //     .pipe(
-  //       catchError( () => of([]) ),
-  //       delay( 2000 ),
-  //     );
-  // }
-
-  // searchCountryByAlphaCode( code: string ): Observable<Country | null> {
-
-  //   const url = `${ this.apiUrl }/alpha/${ code }`;
-
-  //   return this.http.get<Country[]>( url )
-  //     .pipe(
-  //       map( countries => countries.length > 0 ? countries[0]: null ),
-  //       catchError( () => of(null) )
-  //     );
-  // }
-
-
-  // searchCapital( term: string ): Observable<Country[]> {
-
-  //   const url = `${ this.apiUrl }/capital/${ term }`;
-  //   return this.getCountriesRequest(url)
-  //       .pipe(
-  //         tap( countries => this.cacheStore.byCapital = { term, countries }),
-  //         tap( () => this.saveToLocalStorage() ),
-  //       );
-  // }
-
-  // searchCountry( term: string ): Observable<Country[]> {
-
-  //   const url = `${ this.apiUrl }/name/${ term }`;
-  //   return this.getCountriesRequest(url)
-  //     .pipe(
-  //       tap( countries => this.cacheStore.byCountries = { term, countries }),
-  //       tap( () => this.saveToLocalStorage() ),
-  //     );
-  // }
-
-  // searchRegion( region: Region ): Observable<Country[]> {
-
-  //   const url = `${ this.apiUrl }/region/${ region }`;
-  //   return this.getCountriesRequest(url)
-  //     .pipe(
-  //       tap( countries => this.cacheStore.byRegion = { region, countries }),
-  //       tap( () => this.saveToLocalStorage() ),
-  //     );
-  // }
-
 
 }

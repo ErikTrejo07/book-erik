@@ -1,34 +1,89 @@
-<div class="row">
 
-  <sahred-header-bar [proyectList]="proyects"
-                      ></sahred-header-bar>
 
-</div>
+<sahred-header-bar></sahred-header-bar>
 
-<div class="row" style="margin-top: 100px;">
-  <!-- <div class="col-4">
-    <h3>Bandera</h3>
-    <img [src]="country.flags.svg" [alt]="country.name.common" class="img-thumbnail">
-  </div> -->
+<div class="container-fluid">
+  <div class="row" style="margin-top: 100px;">
 
-  <div class="col">
-    <h3>Información</h3>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <strong>ID:</strong> {{ index2 }}
-      </li>
-      <li class="list-group-item">
-        <strong>Proyecto:</strong> {{ proyects[index2].name }}
-      </li>
-      <li class="list-group-item">
-        <strong>Canal:</strong> {{ proyects[index2].channel }}
-      </li>
-      <li>
-        <p>Valor recibido: {{ index2 }}</p>
-        <button (click)="mostrarValor()">Mostrar valor</button>
-      </li>
-    </ul>
+    <div class="col-12 col-md-9">
+      <h4><strong>En {{ proyects[index2].company }} para {{ proyects[index2].customer }}</strong></h4>
+      <br>
+      <p> {{ proyects[index2].lgDescription01}} </p>
+      <p> {{ proyects[index2].lgDescription02}} </p>
+      <p *ngIf="proyects[index2].lgDescription03"> {{ proyects[index2].lgDescription03}} </p>
+      <p *ngIf="proyects[index2].lgDescription04"> {{ proyects[index2].lgDescription04}} </p>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <div class="row g-0">
+        <div class="col-4 col-md-12">
+          <img [src]="proyects[index2].coverImg" class="img-fluid mb-2" alt="Imagen del proyecto">
+        </div>
+        <div class="col-8 col-md-12 px-2">
+          <p class="card-text">Proyecto: <strong>{{ proyects[index2].name }}</strong></p>
+          <p class="card-text">Canal: <strong>{{ proyects[index2].device }}</strong></p>
+          <p class="card-text">Herramientas: <strong>{{ proyects[index2].tool }}</strong></p>
+        </div>
+      </div>
+    </div>
+
   </div>
-  Message: {{ message }}
-  <proyects-card (messageEvent)="receiveMessage($event)"></proyects-card>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <h5><strong>Problemática</strong></h5>
+      <ul>
+        <li>{{ proyects[index2].problematic01}}</li>
+        <li *ngIf="proyects[index2].problematic02">{{ proyects[index2].problematic02}}</li>
+        <li *ngIf="proyects[index2].problematic03">{{ proyects[index2].problematic03}}</li>
+        <li *ngIf="proyects[index2].problematic04">{{ proyects[index2].problematic04}}</li>
+        <li *ngIf="proyects[index2].problematic05">{{ proyects[index2].problematic05}}</li>
+      </ul>
+    </div>
+    <div class="col-12 col-sm-6">
+
+      <h5><strong>¿Para quién diseñamos?</strong></h5>
+
+      <div class="my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+        <span class="p-3"><strong>{{ proyects[index2].target01}}</strong></span>
+      </div>
+      <div *ngIf="proyects[index2].target02" class="my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+        <span class="p-3"><strong>{{ proyects[index2].target02}}</strong></span>
+      </div>
+      <div *ngIf="proyects[index2].target03" class="my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+        <span class="p-3"><strong>{{ proyects[index2].target03}}</strong></span>
+      </div>
+      <div *ngIf="proyects[index2].target04" class="my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+        <span class="p-3"><strong>{{ proyects[index2].target04}}</strong></span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <h5><strong>Solución final</strong></h5> <!-- {{ proyects[index2].solutionTitle[1] }} -->
+      <br>
+      <p *ngIf="proyects[index2].lgDescription01">{{ proyects[index2].lgDescription01}} </p> <!-- {{ proyects[index2].solutionText[1] }} -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 col-sm-4 col-md-3">
+      <img [src]="proyects[index2].coverImg" class="img-fluid mb-2" alt="Imagen del proyecto">
+    </div>
+  </div>
+
 </div>
