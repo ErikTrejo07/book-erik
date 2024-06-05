@@ -8,6 +8,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class AboutMeSectionComponent {
 
+  //public actualDate: Date = new Date();
+  public birthdate: Date = new Date(1990, 0, 7);
 
+  calcularEdad(): number {
+    const actualDate: Date = new Date();
+    const operation = actualDate.getTime() - this.birthdate.getTime();
+    const yearsOld = Math.floor(operation / (1000 * 60 * 60 * 24 * 365.25));
+    return yearsOld;
+  }
 
 }
