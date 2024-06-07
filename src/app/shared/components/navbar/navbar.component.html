@@ -11,7 +11,7 @@
         <a [class.active]="currentSection === 'seccion2'" (click)="scrollToSection('seccion2')" class="mx-md-1 nav-link">ACERCA DE MI</a>
         <a [class.active]="currentSection === 'seccion3'" (click)="scrollToSection('seccion3')" class="mx-md-1 nav-link">MI EXPERIENCIA</a>
         <a [class.active]="currentSection === 'seccion4'" (click)="scrollToSection('seccion4')" class="mx-md-1 nav-link">PROYECTOS</a>
-        <button class="btn btn-primary cv"> DESCARGAR CV</button>
+        <button (click)="descargarArchivo()" class="btn btn-primary cv"> DESCARGAR CV</button>
 
 
       </div>
