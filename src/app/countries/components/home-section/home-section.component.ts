@@ -6,4 +6,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './home-section.component.html',
   styleUrls: ['./home-section.component.css'],
 })
-export class HomeSectionComponent { }
+export class HomeSectionComponent {
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+}

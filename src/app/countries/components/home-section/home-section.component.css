@@ -22,6 +22,10 @@
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 /* .background-overlay {
 	position: absolute;
 	background: rgba(62, 88, 72, 0.7);

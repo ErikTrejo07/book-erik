@@ -1,0 +1,42 @@
+
+a {
+  cursor: pointer;
+}
+
+a.active {
+  /* background-color: #f0f0f0; */
+  color: white;
+  /* font-weight: bold; */
+  text-decoration: underline 3px;
+  text-underline-offset: 6px;
+}
+
+button.cv {
+  border-radius: 0;
+  margin-left: 32px;
+  margin-top: 0;
+}
+
+.div-justify {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+
+  .navbar-collapse {
+    display: block;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 500px; /* Altura máxima cuando está visible */
+    overflow: hidden;
+  }
+
+  .navbar-collapse[hidden] {
+    max-height: 0; /* Altura cero cuando está oculto */
+  }
+
+  .div-justify {
+    text-align: center;
+  }
+
+}

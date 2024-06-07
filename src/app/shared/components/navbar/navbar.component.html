@@ -1,14 +1,18 @@
-<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Erik Trejo</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" (click)="toggleCollapse()" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse div-justify" id="navbarNavAltMarkup" [hidden]="isCollapsed">
       <div class="navbar-nav">
-        <a routerLink="countries/by-capital" routerLinkActive="active" class="nav-link" href="#">Por capital</a>
-        <a routerLink="countries/by-country" routerLinkActive="active" class="nav-link" href="#">Por país</a>
-        <a routerLink="countries/by-region" routerLinkActive="active" class="nav-link" href="#">Por región</a>
+
+        <a [class.active]="currentSection === 'seccion1'" (click)="scrollToSection('seccion1')" class="mx-md-1 nav-link">INICIO</a>
+        <a [class.active]="currentSection === 'seccion2'" (click)="scrollToSection('seccion2')" class="mx-md-1 nav-link">ACERCA DE MI</a>
+        <a [class.active]="currentSection === 'seccion3'" (click)="scrollToSection('seccion3')" class="mx-md-1 nav-link">MI EXPERIENCIA</a>
+        <a [class.active]="currentSection === 'seccion4'" (click)="scrollToSection('seccion4')" class="mx-md-1 nav-link">PROYECTOS</a>
+        <button class="btn btn-primary cv"> DESCARGAR CV</button>
+
 
       </div>
     </div>
