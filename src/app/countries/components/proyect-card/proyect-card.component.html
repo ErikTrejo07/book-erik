@@ -19,38 +19,14 @@
                     <p class="card-text">Herramientas: <strong>{{ proyect.tool }}</strong></p>
                     <p class="card-text">Cliente: <strong>{{ proyect.customer }}</strong></p>
                     <!-- <p class="card-text"><small class="text-body-secondary">{{ proyect.device }}</small></p> -->
-                    <button (click)="enviarId(proyect.id)" (click)="sendMessage()" [routerLink]="[ '/countries/by', proyect.id]"  class="btn btn-outline-primary btn-sm">Más información</button>
+
                   </div>
                 </div>
+                <button (click)="enviarId(proyect.id)" [routerLink]="[ '/countries/by', proyect.id]"  class="btn btn-outline-primary btn-sm mt-2 offset-8 offset-md-7 offset-lg-8 col-4 col-md-5 col-lg-4">Más información</button>
               </div>
             </div>
           </div>
         </div>
-
-        <ng-template #tosdosLosProyectos>
-          <div class="card">
-            <h5 class="card-header"> {{ proyect.company | uppercase }} - {{ proyect.customer | uppercase }} | {{ proyect.year }} </h5>
-            <div class="card-body bg-light">
-              <h5 class="card-title"><strong> {{ proyect.name }} </strong></h5>
-                <p class="card-text">{{ proyect.shDescription }}</p>
-              <div class="row g-0">
-                <div class="col-5">
-                  <img [src]="proyect.coverImg" class="img-fluid rounded" alt="Imagen del proyecto">
-                </div>
-                <div class="col-7">
-                  <div class="px-2">
-                    <p class="card-text">Canal: <strong>{{ proyect.device }}</strong></p>
-                    <p class="card-text">Herramientas: <strong>{{ proyect.tool }}</strong></p>
-                    <p class="card-text">Cliente: <strong>{{ proyect.customer }}</strong></p>
-                    <!-- <p class="card-text"><small class="text-body-secondary">{{ proyect.device }}</small></p> -->
-                    <button (click)="enviarId(proyect.id)" (click)="sendMessage()" [routerLink]="[ '/countries/by', proyect.id]"  class="btn btn-outline-primary btn-sm">Más información</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-
       </div>
 
 
