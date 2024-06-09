@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { Proyect } from 'src/app/countries/interfaces/proyect.interface';
 import { CountriesService } from 'src/app/countries/services/countries.service';
 
@@ -27,4 +27,7 @@ export class HeaderBarComponent {
     this.index2 = parseInt( localStorage.getItem('history')!, 10 );
   }
 
+  mantenerScroll() {
+    this.countriesService.mantenerScroll();
+  }
 }

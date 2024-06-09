@@ -9,15 +9,13 @@ import { Proyect } from '../../interfaces/proyect.interface';
   templateUrl: './proyect-page.component.html',
   styleUrls: ['./proyect-page.component.css'],
 })
-export class ProyectPageComponent  {
+export class ProyectPageComponent implements OnInit  {
 
   constructor(
     private countriesService: CountriesService,
   ) {
     this.loadIdLocalStorage();
   }
-
-
 
 
   public index2: number = 0;
@@ -27,14 +25,14 @@ export class ProyectPageComponent  {
   }
 
 
-
-
   private loadIdLocalStorage():void {
     if( !localStorage.getItem('history') ) return;
     this.index2 = parseInt( localStorage.getItem('history')!, 10 );
   }
 
 
-
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
 
 }

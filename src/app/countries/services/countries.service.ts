@@ -593,5 +593,8 @@ export class CountriesService {
     this.proyects[id].id = id;
   }
 
+  mantenerScroll() {
+    window.scrollTo(0, window.scrollY);
+  }
 
 }
