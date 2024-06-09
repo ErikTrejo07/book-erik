@@ -5,7 +5,10 @@
       <div *ngFor="let proyect of pActivos;" class="col-12 col-md-6 my-2">
         <div >
           <div class="card">
-            <h5 class="card-header"> {{ proyect.company | uppercase }} - {{ proyect.customer | uppercase }} | {{ proyect.year }} </h5>
+            <div class="card-header">
+              <span><small class="text-body-secondary"> {{ proyect.channel | uppercase }} | {{ proyect.year }}</small></span>
+              <h6 class="text-secondary"> {{ proyect.company | uppercase }} - {{ proyect.customer | uppercase }} </h6>
+            </div>
             <div class="card-body bg-light">
               <h5 class="card-title"><strong> {{ proyect.name }} </strong></h5>
                 <p class="card-text">{{ proyect.shDescription }}</p>

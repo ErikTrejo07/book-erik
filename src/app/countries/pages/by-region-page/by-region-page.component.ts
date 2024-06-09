@@ -50,7 +50,7 @@ export class ByRegionPageComponent  implements OnInit {
   searchByChannel(  ):void  { //channel: Channel
 
     if ( this.selected !== 'Todos' ) {
-      this.projectsActivos = this.proyects.filter(project => project.channel === this.selected || project.channel === '');
+      this.projectsActivos = this.proyects.filter(project => project.channel === this.selected || project.channel === 'Multicanal');
       console.log('Filtrado' );
       //this.channelSelected = channel;
     } else {
