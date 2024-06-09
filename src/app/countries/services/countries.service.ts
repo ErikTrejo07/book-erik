@@ -1,16 +1,12 @@
 import { Injectable, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { CacheStore } from '../interfaces/cache-store.interface';
+
 import { Proyect } from '../interfaces/proyect.interface';
 import { Channel } from '../interfaces/channel.type';
 
 @Injectable({ providedIn: 'root' })
 export class CountriesService {
-
-  // private apiUrl: string = 'https://restcountries.com/v3.1';
-  //channelSelected: string = 'Todos';
-
 
 
   public proyects: Proyect[] = [{
@@ -597,21 +593,5 @@ export class CountriesService {
     this.proyects[id].id = id;
   }
 
-  // public cacheStore: CacheStore = {
-  //   byChannel: { channel: '', projects: [] }
-  // }
-
-  constructor(private http: HttpClient ) {
-     //this.loadFromLocalStorage();
-    //  console.log('ProjectsService init');
-  }
-
-
-  // private loadFromLocalStorage() {
-  //   if ( !localStorage.getItem('channel') ) return;
-
-  //   this.channelSelected = localStorage.getItem('channel')!;
-
-  // }
 
 }

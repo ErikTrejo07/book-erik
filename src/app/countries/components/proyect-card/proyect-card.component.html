@@ -6,8 +6,8 @@
         <div >
           <div class="card">
             <div class="card-header">
+              <h6 class="text-body-secondary"> {{ proyect.company | uppercase }} - {{ proyect.customer | uppercase }} </h6>
               <span><small class="text-body-secondary"> {{ proyect.channel | uppercase }} | {{ proyect.year }}</small></span>
-              <h6 class="text-secondary"> {{ proyect.company | uppercase }} - {{ proyect.customer | uppercase }} </h6>
             </div>
             <div class="card-body bg-light">
               <h5 class="card-title"><strong> {{ proyect.name }} </strong></h5>
@@ -21,8 +21,6 @@
                     <p class="card-text">Canal: <strong>{{ proyect.device }}</strong></p>
                     <p class="card-text">Herramientas: <strong>{{ proyect.tool }}</strong></p>
                     <p class="card-text">Cliente: <strong>{{ proyect.customer }}</strong></p>
-                    <!-- <p class="card-text"><small class="text-body-secondary">{{ proyect.device }}</small></p> -->
-
                   </div>
                 </div>
                 <button (click)="enviarId(proyect.id)" [routerLink]="[ '/countries/by', proyect.id]"  class="btn btn-outline-primary btn-sm mt-2 offset-8 offset-md-7 offset-lg-8 col-4 col-md-5 col-lg-4">Más información</button>

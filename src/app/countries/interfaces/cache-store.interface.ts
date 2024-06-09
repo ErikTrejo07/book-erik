@@ -4,11 +4,10 @@ import { Proyect } from './proyect.interface';
 import { Region } from './region.type';
 
 
-export interface CacheStore {
-  // byCapital:   TermCountries;
-  // byCountries: TermCountries;
-  byChannel:    ChannelProyects;
-}
+// export interface CacheStore {
+
+//   byChannel:    ChannelProyects;
+// }
 
 // export interface TermCountries {
 //   term: string;
@@ -20,7 +19,7 @@ export interface CacheStore {
 //   countries: Country[];
 // }
 
-export interface ChannelProyects {
-  channel: Channel;
-  projects: Proyect[]
-}
+// export interface ChannelProyects {
+//   channel: Channel;
+//   projects: Proyect[]
+// }
