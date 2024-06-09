@@ -10,25 +10,26 @@ import { CountriesService } from '../../services/countries.service';
   styleUrls: ['./proyect-card.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProyectCardComponent  {
+export class ProyectCardComponent {
 
   constructor(
   ) {
-    //this.loadChannelLocalStorage();
+    // this.loadChannelLocalStorage();
   }
 
   public index: number = 0;
   public index3: string = ''
-  public selectedChanel: string = 'Autoservicio';
+  public channelSelected: string = 'Autoservicio';
+  public selected: string = '';
 
-  // ngOnInit(): void {
-  //   //   this.countries = this.countriesService.cacheStore.byRegion.countries;
-  //   //   this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
-  //     this.channelSelected = this.countriesService.channelSelected;
-  //    }
+  @Input()
+  public pActivos: Proyect[] = [];
+
 
   @Input()
   public proyectList: Proyect[] = [];
+
+
 
   enviarId(id?: number):void {
 
@@ -47,11 +48,20 @@ export class ProyectCardComponent  {
 
 
   // --------------intento de mandar canal por local storage ---------
+
+  // ngOnInit(): void {
+    //   this.countries = this.countriesService.cacheStore.byRegion.countries;
+    //   this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
+  //   this.loadChannelLocalStorage();
+  // }
+
+
   // private loadChannelLocalStorage():void {
-  //   if( !localStorage.getItem('channel') ) return;
-  //   this.channelSelected = localStorage.getItem('channel')!;
+  //   if( !localStorage.getItem('pActivos') ) return;
+  //   this.pActivos = JSON.parse(localStorage.getItem('pActivos')!);
 
   //   console.log('Canal seleccionado: ',this.channelSelected);
+  //   console.log('desde la card: ',this.pActivos);
 
   // }
 

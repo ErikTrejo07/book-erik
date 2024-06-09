@@ -18,7 +18,10 @@ export class ByRegionPageComponent  implements OnInit {
   public proyects2: Proyect[] = [];
   public channels: Channel[] = ['Todos','Móvil', 'Web', 'Autoservicio', 'Otros', ''];
   // public selectedChannel?: Channel;
-  public channelSelected: string = 'Todos'
+  public channelSelected: string = 'Todos';
+  selected: string = 'Todos';
+  projectsActivos: Proyect[] = [];
+
 
   constructor( private countriesService: CountriesService ) {}
 
@@ -33,36 +36,54 @@ export class ByRegionPageComponent  implements OnInit {
     // this.selectedChannel = this.countriesService.cacheStore.byRegion.channel;
   //}
 
-  searchByChannel( channel: Channel ):void  {
+  setTab( channel: Channel ):void {
+    if ( !channel ) return;
+    this.selected = channel;
 
-    this.channelSelected = channel;
+    this.searchByChannel();
+    console.log(this.projectsActivos);
+    console.log(this.proyects);
+    console.log('Tab seleccionada', this.selected);
+    this.saveChannelLocalStorage();
+  }
+
+  searchByChannel(  ):void  { //channel: Channel
+
+    if ( this.selected !== 'Todos' ) {
+      this.projectsActivos = this.proyects.filter(project => project.channel === this.selected || project.channel === '');
+      console.log('Filtrado' );
+      //this.channelSelected = channel;
+    } else {
+      this.projectsActivos = this.proyects;
+      console.log('No filtrado' );
+    }
 
     // this.countriesService.searchChannel( channel )
     //   .subscribe( proyects => {
     //     this.proyects = proyects;
     //   });
     //   ;
-
   }
 
-  setChannel( channel: Channel ):void {
-
-    if ( !channel ) return;
-    this.channelSelected = channel;
-
-    console.log(this.channelSelected);
-    this.saveChannelLocalStorage();
-
-  }
-
-  // sendMessage() {
-  //   this.saveChannelLocalStorage();
-  // }
 
   private saveChannelLocalStorage():void {
-    localStorage.setItem('channel', this.channelSelected);
+    localStorage.setItem('channel', this.selected);
+    localStorage.setItem('pActivos', JSON.stringify(this.projectsActivos));
+
+    this.loadChannelLocalStorage();
   }
 
+  // Intentar leer datos del localStorage en el componente padre y mandarlos por in @Input
+  loadActivos: Proyect[] = this.proyects;
+
+  private loadChannelLocalStorage():void {
+    if( !localStorage.getItem('pActivos') ) return;
+    this.loadActivos = JSON.parse(localStorage.getItem('pActivos')!);
+
+    console.log('Canal seleccionado leido: ',this.channelSelected);
+    console.log('desde la card leido: ',this.loadActivos);
+
+  }
 
 
   // ------------------------------------//

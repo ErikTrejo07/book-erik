@@ -20,7 +20,7 @@ export class CountriesService {
     company:'Getronics',
     customer: 'BBVA Bancomer',
     year: '2012 - 214',
-    channel: 'Autosevicio',
+    channel: 'Autoservicio',
     shDescription: 'Diseño del cambio de imagen de los ATM’s de BBVA, diseñando componentes más simples y copies más claros.',
     lgDescription01: 'En este momento, BBVA Bancomer llevaba a cabo la transformación de la imagen y la experiencia en todos sus canales, tanto físicos como digitales.',
     lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño del cambio de imagen de los ATM’s de BBVA, diseñando componentes más simples y copies más claros.',
@@ -56,7 +56,7 @@ export class CountriesService {
     company:'Getronics',
     customer: 'BBVA Bancomer',
     year: '2013',
-    channel: 'Autosevicio',
+    channel: 'Autoservicio',
     shDescription: 'Diseño del funcionamiento y experiencia para el envío de comprobantes digitales y contratación de notificaciones por correo y SMS.',
     lgDescription01: 'BBVA Bancomer es una empresa responsable con el medio ambiente y en ese momento el área de cajeros generaba mucha basura, por los comprobantes que tenían que imprimir los ATM’s y Practicajas; por lo tanto se necesitaba una solución para enviar comprobantes de manera digital.',
     lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño del flujo de activación de notificaciones por correo y SMS.',
@@ -92,7 +92,7 @@ export class CountriesService {
     company:'Getronics',
     customer: 'BBVA Bancomer',
     year: '2013',
-    channel: 'Autosevicio',
+    channel: 'Autoservicio',
     shDescription: 'BBVA Bancomer necesitaba un Podio para otorgar turnos en sus nuevas sucursales, donde se pudiera diferenciar a los clientes y se pudiera elegir la operación que fueran a realizar.',
     lgDescription01: 'BBVA Bancomer necesitaba un Podio para otorgar turnos en sus nuevas sucursales, donde se pudiera diferenciar a los clientes y se pudiera elegir la operación que fueran a realizar.',
     lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño del nuevo Podio que se ocuparía en las nuevas sucursales de BBVA Bancomer.',
@@ -128,7 +128,7 @@ export class CountriesService {
     company:'Getronics',
     customer: 'BBVA Bancomer',
     year: '2014',
-    channel: 'Autosevicio',
+    channel: 'Autoservicio',
     shDescription: 'Esta funcionalidad es poco conocida, pero desde el 2014, en las Practicajas de BBVA Bancomer, se pueden hacer depósitos con cheques.',
     lgDescription01: 'BBVA Bancomer necesitaba un canal de autoservicio, donde los clientes pudiera cobrar sus cheques, depositando a su cuenta.',
     lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de una nueva funcionalidad en Practicajas, que es poco conocida, pero desde el 2014, se pueden hacer depósitos con cheques.',
@@ -164,7 +164,7 @@ export class CountriesService {
     company:'Getronics',
     customer: 'BBVA Bancomer',
     year: '2015',
-    channel: 'Todos',
+    channel: '',
     shDescription: 'Diseño de flujos de contratación para productos como consumo preaprobado, seguros e incrementos de línea de crédito; para todos los canales de BBVA Bancomer.',
     lgDescription01: 'BBVA Bancomer necesitaba ofrecer sus productos, donde los clientes pudieran contratarlos de una forma fácil y sencilla, casi que con un solo clic.',
     lgDescription02: 'En este proyecto tuve la oportunidad de participar en el diseño de flujos de contratación de productos como consumo preaprobado, seguros e incrementos de línea.',
@@ -488,7 +488,7 @@ export class CountriesService {
     company:'TATA Consultancy Services',
     customer: 'Scotiabank',
     year: '2020',
-    channel: 'Todos',
+    channel: '',
     shDescription: 'Diseño de la experiencia única y homologada, para el proceso de contraseñas dinámicas en todos los productos de Scotiabank.',
     lgDescription01: 'Tuve la oportunidad de participar en el diseño de la experiencia única y homologada, para el proceso de contraseñas dinámicas en todos los productos de Scotiabank.',
     lgDescription02: 'En ese momento, Scotiabank utilizaba códigos OTP para la autenticación y verificación de sus clientes, pero la experiencia no era la misma en los diferentes canales que se utilizaba.',
@@ -597,10 +597,13 @@ export class CountriesService {
     this.proyects[id].id = id;
   }
 
-
+  // public cacheStore: CacheStore = {
+  //   byChannel: { channel: '', projects: [] }
+  // }
 
   constructor(private http: HttpClient ) {
      //this.loadFromLocalStorage();
+    //  console.log('ProjectsService init');
   }
 
 

@@ -2,27 +2,25 @@
 <nav class="navbar navbar-expand-sm navbar-dark">
   <div class="container-fluid">
     <span class="navbar-brand">PROYECTOS </span>
-
-    <div class="row">
-      <div class="col text-center">
-          <!-- SearchBox -->
-          <button *ngFor="let channel of channels"
-            class="btn mx-2 text-white"
-            [ngClass]="{ 'btn-outline-light': channelSelected === channel }"
-            (click)="setChannel(channel)">
-            {{ channel }}
-          </button>
-      </div>
-    </div>
-
   </div>
 </nav>
 
+<div class="d-flex justify-content-center p-3 bg-light">
+
+  <ul *ngFor="let channel of channels" class="nav nav-pills">
+    <li class="nav-item">
+      <a (click)="setTab(channel)" [ngClass]="{ 'active': selected === channel }" class="nav-link" >{{channel}}</a>
+    </li>
+  </ul>
+</div>
+
 <div class="container-fuid m-3">
+
+
 
   <div class="row">
     <proyects-card [proyectList]="proyects"
-                   ></proyects-card>
+                    [pActivos]="loadActivos"></proyects-card>
   </div>
 
 </div>

@@ -7,7 +7,7 @@ import { Region } from './region.type';
 export interface CacheStore {
   // byCapital:   TermCountries;
   // byCountries: TermCountries;
-  byRegion:    ChannelProyects;
+  byChannel:    ChannelProyects;
 }
 
 // export interface TermCountries {
@@ -22,5 +22,5 @@ export interface CacheStore {
 
 export interface ChannelProyects {
   channel: Channel;
-  proyect: Proyect[]
+  projects: Proyect[]
 }
