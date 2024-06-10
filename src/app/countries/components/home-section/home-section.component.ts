@@ -8,6 +8,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class HomeSectionComponent {
 
+  imagenDeFondo = './assets/Fondo-Inicio';
+
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
