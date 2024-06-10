@@ -7,6 +7,21 @@
 	min-height: 668px;
 }
 
+div h2 {
+  font: 34px/1.5em Avenir;
+}
+
+div h4 {
+  font: 22px/1.5em Avenir;
+}
+
+div p {
+  font: 16px/1.5em Avenir;
+}
+a span {
+  font: 12px/1.5em Avenir;
+}
+
 /* Estilos para diferentes tamaños de pantalla */
 @media (max-width: 768px) {
   .background-image {
