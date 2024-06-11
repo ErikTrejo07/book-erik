@@ -40,7 +40,7 @@ export class CountriesService {
     solutionTitle02: 'Primer cambio de imagen - 2012 - 2013',
     solutionText02: 'En esta fase del proyecto reemplazamos los fondos azules por fondos blancos para agregarle sentido de simplicidad, además de cambiar los iconos, la paleta de colores y textos.',
     solutionImg02: ['./assets/img-atm01-s02-01.jpg','./assets/img-atm01-s02-02.jpg','./assets/img-atm01-s02-03.jpg','./assets/img-atm01-s02-04.jpg'],
-    solutionTitle03: 'Segurndo cambio de imagen - 2014',
+    solutionTitle03: 'Segundo cambio de imagen - 2014',
     solutionText03: 'En esta segunda fase del proyecto reacomodamos la estructura de los elementos, haciendo un esfuerzo porque la pantalla se vea más limpia aún, además de integrar mejoras de usabilidad en cada flujo.',
     solutionImg03: ['./assets/img-atm01-s03-01.jpg','./assets/img-atm01-s03-02.jpg','./assets/img-atm01-s03-03.jpg','./assets/img-atm01-s03-04.jpg'],
     solutionTitle04: '',
