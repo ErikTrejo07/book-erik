@@ -8,15 +8,17 @@
 }
 
 div h2 {
-  font: 34px/1.5em Avenir;
+  font: 42px/1.5em Avenir;
+  letter-spacing: 8px;
 }
 
 div h4 {
-  font: 22px/1.5em Avenir;
+  font: 28px/1.5em Avenir;
+  letter-spacing: 4px;
 }
 
 div p {
-  font: 16px/1.5em Avenir;
+  font: 18px/1.5em Avenir;
 }
 a span {
   font: 12px/1.5em Avenir;
@@ -31,9 +33,23 @@ a span {
 }
 
 @media (max-width: 480px) {
-  .background-image {
-    background-size: auto;
-    background-position: right;
+  .main-header {
+    background-size: cover;
+    background-position: left;
+  }
+
+  div h2 {
+    font: 38px/1.5em Avenir;
+    letter-spacing: 8px;
+  }
+
+  div h4 {
+    font: 25px/1.5em Avenir;
+    letter-spacing: 4px;
+  }
+
+  div p {
+    font: 17px/1.5em Avenir;
   }
 }
 

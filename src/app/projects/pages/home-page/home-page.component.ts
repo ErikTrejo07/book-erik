@@ -4,7 +4,7 @@ import { ContactPageComponent } from '../../../shared/pages/contact-page/contact
 
 @Component({
   selector: 'app-by-capital-page',
-  templateUrl: './by-capital-page.component.html',
+  templateUrl: './home-page.component.html',
   styles: [
   ]
 })

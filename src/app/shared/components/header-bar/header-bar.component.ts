@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2 } from '@angular/core';
-import { Proyect } from 'src/app/countries/interfaces/proyect.interface';
-import { CountriesService } from 'src/app/countries/services/countries.service';
+import { Proyect } from 'src/app/projects/interfaces/proyect.interface';
+import { CountriesService } from 'src/app/projects/services/countries.service';
 
 @Component({
   selector: 'sahred-header-bar',

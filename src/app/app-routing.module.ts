@@ -7,21 +7,21 @@ import { HomePageComponent } from './shared/pages/home-page/home-page.component'
 
 const routes: Routes = [
 
+  // {
+  //   path: 'about',
+  //   component: AboutPageComponent
+  // },
+  // {
+  //   path: 'contact',
+  //   component: ContactPageComponent
+  // },
   {
-    path: 'about',
-    component: AboutPageComponent
-  },
-  {
-    path: 'contact',
-    component: ContactPageComponent
-  },
-  {
-    path: 'countries',
-    loadChildren: () => import('./countries/countries.module').then( m => m.CountriesModule )
+    path: 'projects',
+    loadChildren: () => import('./projects/countries.module').then( m => m.CountriesModule )
   },
   {
     path: '**',
-    redirectTo: 'countries'
+    redirectTo: 'projects'
   }
 ];
 
