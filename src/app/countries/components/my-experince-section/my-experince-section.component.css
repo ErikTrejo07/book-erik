@@ -13,6 +13,10 @@ nav {
   padding: 0;
 }
 
+.row {
+  margin-right: 0;
+}
+
 circle {
   fill: none;
   stroke-width: 6;

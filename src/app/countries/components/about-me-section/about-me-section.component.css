@@ -4,6 +4,10 @@ nav {
   background-color: #4F4F4F;
 }
 
+.row {
+  margin-right: 0;
+}
+
 div p {
   font: 14px/1.5em Avenir;
   color: #4F4F4F;
