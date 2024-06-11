@@ -16,7 +16,7 @@ import { Channel } from '../../interfaces/channel.type';
 export class ByRegionPageComponent  implements OnInit {
 
   public proyects2: Proyect[] = [];
-  public channels: Channel[] = ['Todos','Móvil', 'Web', 'Autoservicio', 'Otros', ''];
+  public channels: Channel[] = ['Todos','Móvil', 'Web', 'Autoservicio', 'Otros'];
   // public selectedChannel?: Channel;
   public channelSelected: string = 'Todos';
   selected: string = 'Todos';
