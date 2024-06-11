@@ -8,4 +8,17 @@ nav {
   height: 60px;
   padding: 0;
   background-color: #4F4F4F;
+  color: white;
+}
+
+div span {
+  font: 22px/1.5em Avenir;
+}
+
+@media (max-width: 480px) {
+
+  div span {
+    font: 16px/1.5em Avenir;
+  }
+
 }

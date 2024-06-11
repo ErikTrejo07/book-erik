@@ -12,7 +12,7 @@ export class CountriesService {
   public proyects: Proyect[] = [{
 
     id: 0,
-    name: 'Cambio de imagen Cajeros Automáticos',
+    name: 'Nueva imagen',
     company:'Getronics',
     customer: 'BBVA Bancomer',
     year: '2012 - 214',
@@ -552,7 +552,7 @@ export class CountriesService {
     solutionImg04: [],
   },{
     id: 15,
-    name: 'Reingeniería sistema OCRA',
+    name: 'Sistema OCRA',
     company:'GFT',
     customer: 'AMIS',
     year: '2021 - 2022',
