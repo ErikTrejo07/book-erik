@@ -15,7 +15,7 @@ export class CountriesService {
     name: 'Nueva imagen',
     company:'Getronics',
     customer: 'BBVA Bancomer',
-    year: '2012 - 214',
+    year: '2012 - 2014',
     channel: 'Autoservicio',
     shDescription: 'Diseño del cambio de imagen de los ATM’s de BBVA, diseñando componentes más simples y copies más claros.',
     lgDescription01: 'En este momento, BBVA Bancomer llevaba a cabo la transformación de la imagen y la experiencia en todos sus canales, tanto físicos como digitales.',
