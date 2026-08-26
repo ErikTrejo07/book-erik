@@ -2,130 +2,411 @@
 
 <sahred-header-bar></sahred-header-bar>
 
-<div class="container-fluid">
-  <div class="row" style="margin-top: 100px;">
+<div
+  *ngIf="proyect"
+  class="container-fluid">
+
+  <div
+    class="row"
+    style="margin-top: 100px;">
 
     <div class="col-12 col-md-9">
-      <h4><strong>En {{ proyects[index2].company }} para {{ proyects[index2].customer }}</strong></h4>
+
+      <h4>
+        <strong>
+          En {{ proyect.company }} para {{ proyect.customer }}
+        </strong>
+      </h4>
+
       <br>
-      <p> {{ proyects[index2].lgDescription01}} </p>
-      <p> {{ proyects[index2].lgDescription02}} </p>
-      <p *ngIf="proyects[index2].lgDescription03"> {{ proyects[index2].lgDescription03}} </p>
-      <p *ngIf="proyects[index2].lgDescription04"> {{ proyects[index2].lgDescription04}} </p>
+
+      <p>
+        {{ proyect.lgDescription01 }}
+      </p>
+
+      <p>
+        {{ proyect.lgDescription02 }}
+      </p>
+
+      <p *ngIf="proyect.lgDescription03">
+        {{ proyect.lgDescription03 }}
+      </p>
+
+      <p *ngIf="proyect.lgDescription04">
+        {{ proyect.lgDescription04 }}
+      </p>
+
     </div>
+
 
     <div class="col-12 col-md-3">
+
       <div class="row g-0">
+
         <div class="col-4 col-md-12">
-          <img [src]="proyects[index2].coverImg" class="img-fluid border mb-2" alt="Imagen del proyecto">
+
+          <img
+            [src]="proyect.coverImg"
+            class="img-fluid border mb-2"
+            [alt]="proyect.name">
+
         </div>
+
         <div class="col-8 col-md-12 px-2">
-          <p class="card-text">Proyecto: <strong>{{ proyects[index2].name }}</strong></p>
-          <p class="card-text">Canal: <strong>{{ proyects[index2].device }}</strong></p>
-          <p class="card-text">Herramientas: <strong>{{ proyects[index2].tool }}</strong></p>
+
+          <p class="card-text">
+            Proyecto:
+            <strong>{{ proyect.name }}</strong>
+          </p>
+
+          <p class="card-text">
+            Canal:
+            <strong>{{ proyect.device }}</strong>
+          </p>
+
+          <p class="card-text">
+            Herramientas:
+            <strong>{{ proyect.tool }}</strong>
+          </p>
+
         </div>
+
       </div>
+
     </div>
 
   </div>
 
 
   <br>
+
+
   <div class="row">
-    <div class="col-12 col-sm-6">
-      <h5><strong>Problemática</strong></h5>
-      <ul class="my-3">
-        <li class="my-2">{{ proyects[index2].problematic01}}</li>
-        <li class="my-2" *ngIf="proyects[index2].problematic02">{{ proyects[index2].problematic02}}</li>
-        <li class="my-2" *ngIf="proyects[index2].problematic03">{{ proyects[index2].problematic03}}</li>
-        <li class="my-2" *ngIf="proyects[index2].problematic04">{{ proyects[index2].problematic04}}</li>
-        <li class="my-2" *ngIf="proyects[index2].problematic05">{{ proyects[index2].problematic05}}</li>
-      </ul>
-    </div>
+
     <div class="col-12 col-sm-6">
 
-      <h5><strong>¿Para quién diseñamos?</strong></h5>
+      <h5>
+        <strong>Problemática</strong>
+      </h5>
+
+      <ul class="my-3">
+
+        <li class="my-2">
+          {{ proyect.problematic01 }}
+        </li>
+
+        <li
+          class="my-2"
+          *ngIf="proyect.problematic02">
+
+          {{ proyect.problematic02 }}
+
+        </li>
+
+        <li
+          class="my-2"
+          *ngIf="proyect.problematic03">
+
+          {{ proyect.problematic03 }}
+
+        </li>
+
+        <li
+          class="my-2"
+          *ngIf="proyect.problematic04">
+
+          {{ proyect.problematic04 }}
+
+        </li>
+
+        <li
+          class="my-2"
+          *ngIf="proyect.problematic05">
+
+          {{ proyect.problematic05 }}
+
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="col-12 col-sm-6">
+
+      <h5>
+        <strong>¿Para quién diseñamos?</strong>
+      </h5>
+
 
       <div class="my-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-person-fill"
+          viewBox="0 0 16 16">
+
+          <path
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
         </svg>
-        <span class="p-3"><strong>{{ proyects[index2].target01}}</strong></span>
+
+        <span class="p-3">
+          <strong>{{ proyect.target01 }}</strong>
+        </span>
+
       </div>
-      <div *ngIf="proyects[index2].target02" class="my-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
+
+      <div
+        *ngIf="proyect.target02"
+        class="my-4">
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-person-fill"
+          viewBox="0 0 16 16">
+
+          <path
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
         </svg>
-        <span class="p-3"><strong>{{ proyects[index2].target02}}</strong></span>
+
+        <span class="p-3">
+          <strong>{{ proyect.target02 }}</strong>
+        </span>
+
       </div>
-      <div *ngIf="proyects[index2].target03" class="my-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
+
+      <div
+        *ngIf="proyect.target03"
+        class="my-4">
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-person-fill"
+          viewBox="0 0 16 16">
+
+          <path
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
         </svg>
-        <span class="p-3"><strong>{{ proyects[index2].target03}}</strong></span>
+
+        <span class="p-3">
+          <strong>{{ proyect.target03 }}</strong>
+        </span>
+
       </div>
-      <div *ngIf="proyects[index2].target04" class="my-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
+
+      <div
+        *ngIf="proyect.target04"
+        class="my-4">
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-person-fill"
+          viewBox="0 0 16 16">
+
+          <path
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+
         </svg>
-        <span class="p-3"><strong>{{ proyects[index2].target04}}</strong></span>
+
+        <span class="p-3">
+          <strong>{{ proyect.target04 }}</strong>
+        </span>
+
       </div>
 
     </div>
+
   </div>
+
 
   <br>
-  <div *ngIf="proyects[index2].solutionTitle01" class="row mt-3">
+
+
+  <div
+    *ngIf="proyect.solutionTitle01"
+    class="row mt-3">
+
     <div>
-      <h5><strong>{{ proyects[index2].solutionTitle01 }}</strong></h5>
+
+      <h5>
+        <strong>
+          {{ proyect.solutionTitle01 }}
+        </strong>
+      </h5>
+
       <br>
-      <p *ngIf="proyects[index2].solutionText01">{{ proyects[index2].solutionText01 }} </p>
+
+      <p *ngIf="proyect.solutionText01">
+        {{ proyect.solutionText01 }}
+      </p>
+
     </div>
+
   </div>
 
-  <div *ngIf="proyects[index2].solutionImg01" class="row pt-1">
-    <div *ngFor="let image of proyects[index2].solutionImg01;" class="col-6 col-sm-4 col-md-3">
-      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
+
+  <div
+    *ngIf="proyect.solutionImg01?.length"
+    class="row pt-1">
+
+    <div
+      *ngFor="let image of proyect.solutionImg01"
+      class="col-6 col-sm-4 col-md-3">
+
+      <img
+        [src]="image"
+        class="img-fluid mb-2"
+        alt="Imagen del proyecto">
+
     </div>
+
   </div>
 
-  <div *ngIf="proyects[index2].solutionTitle02" class="row mt-4">
+
+  <div
+    *ngIf="proyect.solutionTitle02"
+    class="row mt-4">
+
     <div>
-      <h5><strong>{{ proyects[index2].solutionTitle02 }}</strong></h5>
-      <p class="my-4" *ngIf="proyects[index2].solutionText02">{{ proyects[index2].solutionText02 }} </p>
+
+      <h5>
+        <strong>
+          {{ proyect.solutionTitle02 }}
+        </strong>
+      </h5>
+
+      <p
+        class="my-4"
+        *ngIf="proyect.solutionText02">
+
+        {{ proyect.solutionText02 }}
+
+      </p>
+
     </div>
+
   </div>
 
-  <div *ngIf="proyects[index2].solutionImg02" class="row pt-1">
-    <div *ngFor="let image of proyects[index2].solutionImg02;" class="col-6 col-sm-4 col-md-3">
-      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
+
+  <div
+    *ngIf="proyect.solutionImg02?.length"
+    class="row pt-1">
+
+    <div
+      *ngFor="let image of proyect.solutionImg02"
+      class="col-6 col-sm-4 col-md-3">
+
+      <img
+        [src]="image"
+        class="img-fluid mb-2"
+        alt="Imagen del proyecto">
+
     </div>
+
   </div>
 
-  <div *ngIf="proyects[index2].solutionTitle03" class="row mt-4">
+
+  <div
+    *ngIf="proyect.solutionTitle03"
+    class="row mt-4">
+
     <div>
-      <h5><strong>{{ proyects[index2].solutionTitle03 }}</strong></h5>
-      <p class="my-4" *ngIf="proyects[index2].solutionText03">{{ proyects[index2].solutionText03 }} </p>
+
+      <h5>
+        <strong>
+          {{ proyect.solutionTitle03 }}
+        </strong>
+      </h5>
+
+      <p
+        class="my-4"
+        *ngIf="proyect.solutionText03">
+
+        {{ proyect.solutionText03 }}
+
+      </p>
+
     </div>
+
   </div>
 
-  <div *ngIf="proyects[index2].solutionImg03" class="row pt-1">
-    <div *ngFor="let image of proyects[index2].solutionImg03;" class="col-6 col-sm-4 col-md-3">
-      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
+
+  <div
+    *ngIf="proyect.solutionImg03?.length"
+    class="row pt-1">
+
+    <div
+      *ngFor="let image of proyect.solutionImg03"
+      class="col-6 col-sm-4 col-md-3">
+
+      <img
+        [src]="image"
+        class="img-fluid mb-2"
+        alt="Imagen del proyecto">
+
     </div>
+
   </div>
 
-  <div *ngIf="proyects[index2].solutionTitle04" class="row mt-4">
+
+  <div
+    *ngIf="proyect.solutionTitle04"
+    class="row mt-4">
+
     <div>
-      <h5><strong>{{ proyects[index2].solutionTitle04 }}</strong></h5>
-      <p class="my-4" *ngIf="proyects[index2].solutionText04">{{ proyects[index2].solutionText04 }} </p>
+
+      <h5>
+        <strong>
+          {{ proyect.solutionTitle04 }}
+        </strong>
+      </h5>
+
+      <p
+        class="my-4"
+        *ngIf="proyect.solutionText04">
+
+        {{ proyect.solutionText04 }}
+
+      </p>
+
     </div>
+
   </div>
 
-  <div *ngIf="proyects[index2].solutionImg04" class="row pt-1">
-    <div *ngFor="let image of proyects[index2].solutionImg04;" class="col-6 col-sm-4 col-md-3">
-      <img [src]="image" class="img-fluid mb-2" alt="Imagen del proyecto">
+
+  <div
+    *ngIf="proyect.solutionImg04?.length"
+    class="row pt-1">
+
+    <div
+      *ngFor="let image of proyect.solutionImg04"
+      class="col-6 col-sm-4 col-md-3">
+
+      <img
+        [src]="image"
+        class="img-fluid mb-2"
+        alt="Imagen del proyecto">
+
     </div>
+
   </div>
 
 </div>

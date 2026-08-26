@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { CountriesService } from '../../services/countries.service';
-import { switchMap } from 'rxjs';
 import { Proyect } from '../../interfaces/proyect.interface';
 
 @Component({
@@ -9,30 +9,27 @@ import { Proyect } from '../../interfaces/proyect.interface';
   templateUrl: './proyect-page.component.html',
   styleUrls: ['./proyect-page.component.css'],
 })
-export class ProyectPageComponent implements OnInit  {
+export class ProyectPageComponent implements OnInit {
+
+  public proyect?: Proyect;
 
   constructor(
-    private countriesService: CountriesService,
-  ) {
-    this.loadIdLocalStorage();
-  }
+    private activatedRoute: ActivatedRoute,
+    private countriesService: CountriesService
+  ) {}
 
+  ngOnInit(): void {
 
-  public index2: number = 0;
-
-  get proyects(): Proyect[] {
-    return [...this.countriesService.proyects];
-  }
-
-
-  private loadIdLocalStorage():void {
-    if( !localStorage.getItem('history') ) return;
-    this.index2 = parseInt( localStorage.getItem('history')!, 10 );
-  }
-
-
-  ngOnInit() {
     window.scrollTo(0, 0);
+
+    const id = Number(
+      this.activatedRoute.snapshot.paramMap.get('id')
+    );
+
+    this.proyect = this.countriesService.proyects.find(
+      proyect => proyect.id === id
+    );
+
   }
 
 }

@@ -9,26 +9,7 @@ import { Proyect } from '../../interfaces/proyect.interface';
 })
 export class ProyectCardComponent {
 
-  constructor() {}
-
-  public index: string = '';
-
   @Input()
-  public pActivos: Proyect[] = [];
-
-
-  enviarId(id?: number):void {
-
-    if ( id !== 0 ) {
-      this.index = id!.toString();
-    } else {
-      this.index = '0';
-    }
-    this.saveIdLocalStorage();
-  }
-
-  private saveIdLocalStorage():void {
-    localStorage.setItem('history', this.index)
-  }
+  public proyect!: Proyect;
 
 }

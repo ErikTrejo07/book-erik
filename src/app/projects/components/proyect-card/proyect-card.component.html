@@ -1,36 +1,77 @@
 
 
-  <div class="row">
+  <div class="card h-100">
 
-      <div *ngFor="let proyect of pActivos;" class="col-12 col-md-6 my-2">
-        <div >
-          <div class="card">
-            <div class="card-header">
-              <h6 class="text-body-secondary"> {{ proyect.company | uppercase }} - {{ proyect.customer | uppercase }} </h6>
-              <span><small class="text-body-secondary"> {{ proyect.channel | uppercase }} | {{ proyect.year }}</small></span>
-            </div>
-            <div class="card-body bg-light">
-              <h5 class="card-title"><strong> {{ proyect.name }} </strong></h5>
-                <p class="card-text">{{ proyect.shDescription }}</p>
-              <div class="row g-0">
-                <div class="col-5">
-                  <img [src]="proyect.coverImg" class="img-fluid rounded" alt="Imagen del proyecto">
-                </div>
-                <div class="col-7">
-                  <div class="px-2">
-                    <p class="card-text">Canal: <strong>{{ proyect.device }}</strong></p>
-                    <p class="card-text">Herramientas: <strong>{{ proyect.tool }}</strong></p>
-                    <p class="card-text">Cliente: <strong>{{ proyect.customer }}</strong></p>
-                  </div>
-                </div>
-                <button (click)="enviarId(proyect.id)" [routerLink]="[ '/projects/by', proyect.id]"  class="btn btn-outline-primary btn-sm mt-2 offset-md-7 offset-lg-8 col-12 col-md-5 col-lg-4">Más información</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="card-header">
 
+    <h6 class="text-body-secondary">
+      {{ proyect.company | uppercase }} -
+      {{ proyect.customer | uppercase }}
+    </h6>
 
+    <span>
+      <small class="text-body-secondary">
+        {{ proyect.channel | uppercase }} | {{ proyect.year }}
+      </small>
+    </span>
 
   </div>
+
+  <div class="card-body bg-light">
+
+    <h5 class="card-title">
+      <strong>{{ proyect.name }}</strong>
+    </h5>
+
+    <p class="card-text">
+      {{ proyect.shDescription }}
+    </p>
+
+    <div class="row g-0">
+
+      <div class="col-5">
+
+        <img
+          [src]="proyect.coverImg"
+          class="img-fluid rounded"
+          [alt]="proyect.name">
+
+      </div>
+
+      <div class="col-7">
+
+        <div class="px-2">
+
+          <p class="card-text">
+            Canal:
+            <strong>{{ proyect.device }}</strong>
+          </p>
+
+          <p class="card-text">
+            Herramientas:
+            <strong>{{ proyect.tool }}</strong>
+          </p>
+
+          <p class="card-text">
+            Cliente:
+            <strong>{{ proyect.customer }}</strong>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <a
+      [routerLink]="['/projects/by', proyect.id]"
+      class="btn btn-outline-primary btn-sm mt-3">
+
+      Más información
+
+    </a>
+
+  </div>
+
+</div>
 
