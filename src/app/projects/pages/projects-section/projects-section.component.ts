@@ -4,11 +4,11 @@ import { Proyect } from '../../interfaces/proyect.interface';
 import { Channel } from '../../interfaces/channel.type';
 
 @Component({
-  selector: 'app-by-region-page',
-  templateUrl: './by-region-page.component.html',
-  styleUrls: ['./by-region-page.component.css'],
+  selector: 'projects-section',
+  templateUrl: './projects-section.component.html',
+  styleUrls: ['./projects-section.component.css'],
 })
-export class ByRegionPageComponent {
+export class ProjectsSectionComponent {
 
   public channels: Channel[] = [
     'Todos',

@@ -8,7 +8,7 @@ import { ContactPageComponent } from '../../../shared/pages/contact-page/contact
   styles: [
   ]
 })
-export class ByCapitalPageComponent implements OnInit {
+export class HomePageComponent implements OnInit {
 
 
   constructor( private scrollService: CountriesService ) {}

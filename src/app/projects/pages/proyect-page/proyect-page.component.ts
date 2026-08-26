@@ -9,7 +9,7 @@ import { Proyect } from '../../interfaces/proyect.interface';
   templateUrl: './proyect-page.component.html',
   styleUrls: ['./proyect-page.component.css'],
 })
-export class ProyectPageComponent implements OnInit {
+export class ProjectPageComponent implements OnInit {
 
   public proyect?: Proyect;
 
