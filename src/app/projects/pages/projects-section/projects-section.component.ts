@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CountriesService } from '../../services/countries.service';
-import { Proyect } from '../../interfaces/proyect.interface';
+import { ProjectsService } from '../../services/projects.service';
+import { Project } from '../../interfaces/project.interface';
 import { Channel } from '../../interfaces/channel.type';
 
 @Component({
@@ -21,23 +21,23 @@ export class ProjectsSectionComponent {
   public selected: Channel = 'Todos';
 
   constructor(
-    private countriesService: CountriesService
+    private projectsService: ProjectsService
   ) {}
 
-  get proyects(): Proyect[] {
-    return [...this.countriesService.proyects];
+  get projects(): Project[] {
+    return [...this.projectsService.projects];
   }
 
-  get filteredProjects(): Proyect[] {
+  get filteredProjects(): Project[] {
 
     if (this.selected === 'Todos') {
-      return this.proyects;
+      return this.projects;
     }
 
-    return this.proyects.filter(
-      proyect =>
-        proyect.channel === this.selected ||
-        proyect.channel === 'Multicanal'
+    return this.projects.filter(
+      project =>
+        project.channel === this.selected ||
+        project.channel === 'Multicanal'
     );
 
   }

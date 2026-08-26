@@ -5,13 +5,13 @@
   <div class="card-header">
 
     <h6 class="text-body-secondary">
-      {{ proyect.company | uppercase }} -
-      {{ proyect.customer | uppercase }}
+      {{ project.company | uppercase }} -
+      {{ project.customer | uppercase }}
     </h6>
 
     <span>
       <small class="text-body-secondary">
-        {{ proyect.channel | uppercase }} | {{ proyect.year }}
+        {{ project.channel | uppercase }} | {{ project.year }}
       </small>
     </span>
 
@@ -20,11 +20,11 @@
   <div class="card-body bg-light">
 
     <h5 class="card-title">
-      <strong>{{ proyect.name }}</strong>
+      <strong>{{ project.name }}</strong>
     </h5>
 
     <p class="card-text">
-      {{ proyect.shDescription }}
+      {{ project.shDescription }}
     </p>
 
     <div class="row g-0">
@@ -32,9 +32,9 @@
       <div class="col-5">
 
         <img
-          [src]="proyect.coverImg"
+          [src]="project.coverImg"
           class="img-fluid rounded"
-          [alt]="proyect.name">
+          [alt]="project.name">
 
       </div>
 
@@ -44,17 +44,17 @@
 
           <p class="card-text">
             Canal:
-            <strong>{{ proyect.device }}</strong>
+            <strong>{{ project.device }}</strong>
           </p>
 
           <p class="card-text">
             Herramientas:
-            <strong>{{ proyect.tool }}</strong>
+            <strong>{{ project.tool }}</strong>
           </p>
 
           <p class="card-text">
             Cliente:
-            <strong>{{ proyect.customer }}</strong>
+            <strong>{{ project.customer }}</strong>
           </p>
 
         </div>
@@ -64,7 +64,7 @@
     </div>
 
     <a
-      [routerLink]="['/projects/by', proyect.id]"
+      [routerLink]="['/projects/by', project.id]"
       class="btn btn-outline-primary btn-sm mt-3">
 
       Más información

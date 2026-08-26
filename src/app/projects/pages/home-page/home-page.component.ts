@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CountriesService } from '../../services/countries.service';
+import { ProjectsService } from '../../services/projects.service';
 import { ContactPageComponent } from '../../../shared/pages/contact-page/contact-page.component';
 
 @Component({
@@ -11,7 +11,9 @@ import { ContactPageComponent } from '../../../shared/pages/contact-page/contact
 export class HomePageComponent implements OnInit {
 
 
-  constructor( private scrollService: CountriesService ) {}
+  constructor(
+    private scrollService: ProjectsService
+  ) {}
 
   ngOnInit() {
     this.scrollService.mantenerScroll();

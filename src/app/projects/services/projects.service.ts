@@ -2,14 +2,14 @@ import { Injectable, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
-import { Proyect } from '../interfaces/proyect.interface';
+import { Project } from '../interfaces/project.interface';
 import { Channel } from '../interfaces/channel.type';
 
 @Injectable({ providedIn: 'root' })
-export class CountriesService {
+export class ProjectsService {
 
 
-  public proyects: Proyect[] = [{
+  public projects: Project[] = [{
 
     id: 0,
     name: 'Nueva imagen',
@@ -625,8 +625,8 @@ export class CountriesService {
   }];
 
 
-  showProyectById( id:number ) {
-    this.proyects[id].id = id;
+  showProjectById( id:number ) {
+    this.projects[id].id = id;
   }
 
   mantenerScroll() {

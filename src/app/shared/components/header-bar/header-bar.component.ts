@@ -1,7 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Renderer2 } from '@angular/core';
-import { Proyect } from 'src/app/projects/interfaces/proyect.interface';
-import { CountriesService } from 'src/app/projects/services/countries.service';
+import { Component, Input } from '@angular/core';
+import { Project } from 'src/app/projects/interfaces/project.interface';
+import { ProjectsService } from 'src/app/projects/services/projects.service';
 
 @Component({
   selector: 'sahred-header-bar',
@@ -10,24 +9,15 @@ import { CountriesService } from 'src/app/projects/services/countries.service';
 })
 export class HeaderBarComponent {
 
+  @Input()
+  public project!: Project;
+
   constructor(
-    private countriesService: CountriesService,
-  ) {
-    this.loadIdLocalStorage();
+    private projectsService: ProjectsService
+  ) {}
+
+  mantenerScroll(): void {
+    this.projectsService.mantenerScroll();
   }
 
-  public index2: number = 0;
-
-  get proyects(): Proyect[] {
-    return [...this.countriesService.proyects];
-  }
-
-  private loadIdLocalStorage():void {
-    if( !localStorage.getItem('history') ) return;
-    this.index2 = parseInt( localStorage.getItem('history')!, 10 );
-  }
-
-  mantenerScroll() {
-    this.countriesService.mantenerScroll();
-  }
 }
