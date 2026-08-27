@@ -57,7 +57,7 @@
           <div class="col-8 col-md-12 px-2">
 
             <p class="card-text">
-              Projecto:
+              Proyecto:
               <strong>{{ project.name }}</strong>
             </p>
 
@@ -144,169 +144,44 @@
 
 
     <div
-      *ngIf="project.solutionTitle01"
-      class="row mt-3">
+      *ngFor="let solution of project.solutions"
+      class="mt-4">
 
-      <div>
+      <div class="row">
 
-        <h5>
-          <strong>
-            {{ project.solutionTitle01 }}
-          </strong>
-        </h5>
+        <div>
 
-        <br>
+          <h5>
+            <strong>{{ solution.title }}</strong>
+          </h5>
 
-        <p *ngIf="project.solutionText01">
-          {{ project.solutionText01 }}
-        </p>
+          <p
+            *ngIf="solution.description"
+            class="my-4">
+
+            {{ solution.description }}
+
+          </p>
+
+        </div>
 
       </div>
 
-    </div>
-
-
-    <div
-      *ngIf="project.solutionImg01?.length"
-      class="row pt-1">
 
       <div
-        *ngFor="let image of project.solutionImg01"
-        class="col-6 col-sm-4 col-md-3">
+        *ngIf="solution.images.length"
+        class="row pt-1">
 
-        <img
-          [src]="image"
-          class="img-fluid mb-2"
-          alt="Imagen del proyecto">
+        <div
+          *ngFor="let image of solution.images"
+          class="col-6 col-sm-4 col-md-3">
 
-      </div>
+          <img
+            [src]="image"
+            class="img-fluid mb-2"
+            alt="Imagen del proyecto">
 
-    </div>
-
-
-    <div
-      *ngIf="project.solutionTitle02"
-      class="row mt-4">
-
-      <div>
-
-        <h5>
-          <strong>
-            {{ project.solutionTitle02 }}
-          </strong>
-        </h5>
-
-        <p
-          class="my-4"
-          *ngIf="project.solutionText02">
-
-          {{ project.solutionText02 }}
-
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div
-      *ngIf="project.solutionImg02?.length"
-      class="row pt-1">
-
-      <div
-        *ngFor="let image of project.solutionImg02"
-        class="col-6 col-sm-4 col-md-3">
-
-        <img
-          [src]="image"
-          class="img-fluid mb-2"
-          alt="Imagen del proyecto">
-
-      </div>
-
-    </div>
-
-
-    <div
-      *ngIf="project.solutionTitle03"
-      class="row mt-4">
-
-      <div>
-
-        <h5>
-          <strong>
-            {{ project.solutionTitle03 }}
-          </strong>
-        </h5>
-
-        <p
-          class="my-4"
-          *ngIf="project.solutionText03">
-
-          {{ project.solutionText03 }}
-
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div
-      *ngIf="project.solutionImg03?.length"
-      class="row pt-1">
-
-      <div
-        *ngFor="let image of project.solutionImg03"
-        class="col-6 col-sm-4 col-md-3">
-
-        <img
-          [src]="image"
-          class="img-fluid mb-2"
-          alt="Imagen del proyecto">
-
-      </div>
-
-    </div>
-
-
-    <div
-      *ngIf="project.solutionTitle04"
-      class="row mt-4">
-
-      <div>
-
-        <h5>
-          <strong>
-            {{ project.solutionTitle04 }}
-          </strong>
-        </h5>
-
-        <p
-          class="my-4"
-          *ngIf="project.solutionText04">
-
-          {{ project.solutionText04 }}
-
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div
-      *ngIf="project.solutionImg04?.length"
-      class="row pt-1">
-
-      <div
-        *ngFor="let image of project.solutionImg04"
-        class="col-6 col-sm-4 col-md-3">
-
-        <img
-          [src]="image"
-          class="img-fluid mb-2"
-          alt="Imagen del proyecto">
+        </div>
 
       </div>
 

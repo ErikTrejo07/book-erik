@@ -1,3 +1,9 @@
+export interface ProjectSolution {
+  title: string;
+  description?: string;
+  images: string[];
+}
+
 export interface Project {
   id: number;
   name: string;
@@ -20,19 +26,5 @@ export interface Project {
   problems: string[];
   targets: string[];
 
-  solutionTitle01?: string;
-  solutionText01?: string;
-  solutionImg01?: string[];
-
-  solutionTitle02?: string;
-  solutionText02?: string;
-  solutionImg02?: string[];
-
-  solutionTitle03?: string;
-  solutionText03?: string;
-  solutionImg03?: string[];
-
-  solutionTitle04?: string;
-  solutionText04?: string;
-  solutionImg04?: string[];
+  solutions: ProjectSolution[];
 }

@@ -25,18 +25,22 @@ export const PROJECTS: Project[] = [
     targets: [
       'Clientes con nómina BBVA Bancomer'
     ],
-    solutionTitle01: 'Antes',
-    solutionText01: '',
-    solutionImg01: ['./assets/img-atm01-s01-01.jpg','./assets/img-atm01-s01-02.jpg','./assets/img-atm01-s01-03.jpg','./assets/img-atm01-s01-04.jpg'],
-    solutionTitle02: 'Primer cambio de imagen - 2012 - 2013',
-    solutionText02: 'En esta fase del proyecto reemplazamos los fondos azules por fondos blancos para agregarle sentido de simplicidad, además de cambiar los iconos, la paleta de colores y textos.',
-    solutionImg02: ['./assets/img-atm01-s02-01.jpg','./assets/img-atm01-s02-02.jpg','./assets/img-atm01-s02-03.jpg','./assets/img-atm01-s02-04.jpg'],
-    solutionTitle03: 'Segundo cambio de imagen - 2014',
-    solutionText03: 'En esta segunda fase del proyecto reacomodamos la estructura de los elementos, haciendo un esfuerzo porque la pantalla se vea más limpia aún, además de integrar mejoras de usabilidad en cada flujo.',
-    solutionImg03: ['./assets/img-atm01-s03-01.jpg','./assets/img-atm01-s03-02.jpg','./assets/img-atm01-s03-03.jpg','./assets/img-atm01-s03-04.jpg'],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Antes',
+      images: ['./assets/img-atm01-s01-01.jpg','./assets/img-atm01-s01-02.jpg','./assets/img-atm01-s01-03.jpg','./assets/img-atm01-s01-04.jpg'],
+      },
+    {
+      title: 'Primer cambio de imagen - 2012 - 2013',
+      description: 'En esta fase del proyecto reemplazamos los fondos azules por fondos blancos para agregarle sentido de simplicidad, además de cambiar los iconos, la paleta de colores y textos.',
+      images: ['./assets/img-atm01-s02-01.jpg','./assets/img-atm01-s02-02.jpg','./assets/img-atm01-s02-03.jpg','./assets/img-atm01-s02-04.jpg'],
+      },
+    {
+      title: 'Segundo cambio de imagen - 2014',
+      description: 'En esta segunda fase del proyecto reacomodamos la estructura de los elementos, haciendo un esfuerzo porque la pantalla se vea más limpia aún, además de integrar mejoras de usabilidad en cada flujo.',
+      images: ['./assets/img-atm01-s03-01.jpg','./assets/img-atm01-s03-02.jpg','./assets/img-atm01-s03-03.jpg','./assets/img-atm01-s03-04.jpg'],
+    }
+    ]
   },{
     id: 1,
     name: 'Comprobante digital',
@@ -61,18 +65,13 @@ export const PROJECTS: Project[] = [
       'Clientes sin Alertas Bancomer (SMS)',
       'Clientes sin notificaciones por correo activas',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto tuvimos que detectar todos los posibles casos en los que un cliente se podría encontrar, ya que si no contaba con Alertas Bancomer, se tenía que ofertar la contratación y lo mismo si no contaba con notificaciones por correo. Sin mencionar que este proyecto aplicaba para todos los flujos que tenía el cajero en ese momento.',
-    solutionImg01: ['./assets/img-atm02-s01-01.jpg','./assets/img-atm02-s01-02.jpg','./assets/img-atm02-s01-03.jpg','./assets/img-atm02-s01-04.jpg','./assets/img-atm02-s01-05.jpg','./assets/img-atm02-s01-06.jpg','./assets/img-atm02-s01-07.jpg','./assets/img-atm02-s01-08.jpg'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto tuvimos que detectar todos los posibles casos en los que un cliente se podría encontrar, ya que si no contaba con Alertas Bancomer, se tenía que ofertar la contratación y lo mismo si no contaba con notificaciones por correo. Sin mencionar que este proyecto aplicaba para todos los flujos que tenía el cajero en ese momento.',
+      images: ['./assets/img-atm02-s01-01.jpg','./assets/img-atm02-s01-02.jpg','./assets/img-atm02-s01-03.jpg','./assets/img-atm02-s01-04.jpg','./assets/img-atm02-s01-05.jpg','./assets/img-atm02-s01-06.jpg','./assets/img-atm02-s01-07.jpg','./assets/img-atm02-s01-08.jpg'],
+    }
+    ]
   },{
     id: 2,
     name: 'Diseño del sistema de turnos (Podio) ',
@@ -97,18 +96,13 @@ export const PROJECTS: Project[] = [
       'Clientes que asisten a sucursal',
       'No clientes que asisten a sucursales de BBVA Bancomer',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto tuvimos que diseñar una nueva estructura de información, adaptándolo al formato vertical y generar nuevos componentes y animaciones.',
-    solutionImg01: ['./assets/img-podio-s01-01.jpg','./assets/img-podio-s01-02.jpg','./assets/img-podio-s01-03.jpg','./assets/img-podio-s01-04.jpg'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto tuvimos que diseñar una nueva estructura de información, adaptándolo al formato vertical y generar nuevos componentes y animaciones.',
+      images: ['./assets/img-podio-s01-01.jpg','./assets/img-podio-s01-02.jpg','./assets/img-podio-s01-03.jpg','./assets/img-podio-s01-04.jpg'],
+    }
+    ]
   },{
     id: 3,
     name: 'Depósito de cheques',
@@ -131,18 +125,13 @@ export const PROJECTS: Project[] = [
     targets: [
       'Clientes que reciben cheques de BBVA Bancomer',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto diseñamos una nueva experiencia simple y sencilla, que en solo 3 pasos un cliente podría cobrar uno o hasta 20 cheques.',
-    solutionImg01: ['./assets/img-cheques-s01-01.jpg','./assets/img-cheques-s01-02.jpg','./assets/img-cheques-s01-03.jpg','./assets/img-cheques-s01-04.jpg'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto diseñamos una nueva experiencia simple y sencilla, que en solo 3 pasos un cliente podría cobrar uno o hasta 20 cheques.',
+      images: ['./assets/img-cheques-s01-01.jpg','./assets/img-cheques-s01-02.jpg','./assets/img-cheques-s01-03.jpg','./assets/img-cheques-s01-04.jpg'],
+    }
+    ]
   },{
     id: 4,
     name: 'Oneclic',
@@ -166,18 +155,23 @@ export const PROJECTS: Project[] = [
     targets: [
       'Clientes con nómina en BBVA Bancomer',
     ],
-    solutionTitle01: 'Solución final ATM',
-    solutionText01: 'Para este canal diseñamos un menú dinámico, donde apareciera el botón de la oferta si el cliente tenía una sola oferta. Pero si el cliente tenía más de una oferta, el botón cambiara y llevara a otra pantalla con un carrusel de ofertas. Además de presentar la oferta después de cada retiro.',
-    solutionImg01: ['./assets/img-oneclic-s01-01.jpg','./assets/img-oneclic-s01-02.jpg','./assets/img-oneclic-s01-03.jpg','./assets/img-oneclic-s01-04.jpg'],
-    solutionTitle02: 'Solución final Móvil',
-    solutionText02: 'Para este canal diseñamos un carrusel de botones dinámicos, directamente en el menú. De tal forma que pudieran aparecer uno o mas botones, según la cantidad de ofertas que tuviera cada cliente. Además de presentar otra oferta al final de cada contratación.',
-    solutionImg02: ['./assets/img-oneclic-s02-01.png','./assets/img-oneclic-s02-02.png','./assets/img-oneclic-s02-03.png','./assets/img-oneclic-s02-04.png'],
-    solutionTitle03: 'Solución final Web',
-    solutionText03: 'Para este canal diseñamos un menú dinámico, donde apareciera el botón de la oferta si el cliente tenía una sola oferta. Pero si el cliente tenía más de una oferta, el botón cambiara y llevara a otra pantalla con un carrusel de ofertas. Además de presentar la oferta después de cada retiro.',
-    solutionImg03: ['./assets/img-oneclic-s03-01.jpg','./assets/img-oneclic-s03-02.jpg','./assets/img-oneclic-s03-03.jpg','./assets/img-oneclic-s03-04.jpg'],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final ATM',
+      description: 'Para este canal diseñamos un menú dinámico, donde apareciera el botón de la oferta si el cliente tenía una sola oferta. Pero si el cliente tenía más de una oferta, el botón cambiara y llevara a otra pantalla con un carrusel de ofertas. Además de presentar la oferta después de cada retiro.',
+      images: ['./assets/img-oneclic-s01-01.jpg','./assets/img-oneclic-s01-02.jpg','./assets/img-oneclic-s01-03.jpg','./assets/img-oneclic-s01-04.jpg'],
+      },
+    {
+      title: 'Solución final Móvil',
+      description: 'Para este canal diseñamos un carrusel de botones dinámicos, directamente en el menú. De tal forma que pudieran aparecer uno o mas botones, según la cantidad de ofertas que tuviera cada cliente. Además de presentar otra oferta al final de cada contratación.',
+      images: ['./assets/img-oneclic-s02-01.png','./assets/img-oneclic-s02-02.png','./assets/img-oneclic-s02-03.png','./assets/img-oneclic-s02-04.png'],
+      },
+    {
+      title: 'Solución final Web',
+      description: 'Para este canal diseñamos un menú dinámico, donde apareciera el botón de la oferta si el cliente tenía una sola oferta. Pero si el cliente tenía más de una oferta, el botón cambiara y llevara a otra pantalla con un carrusel de ofertas. Además de presentar la oferta después de cada retiro.',
+      images: ['./assets/img-oneclic-s03-01.jpg','./assets/img-oneclic-s03-02.jpg','./assets/img-oneclic-s03-03.jpg','./assets/img-oneclic-s03-04.jpg'],
+    }
+    ]
   },{
     id: 5,
     name: 'Sistema GUIA',
@@ -203,18 +197,16 @@ export const PROJECTS: Project[] = [
       'Encargado de ventas de BBVA Bancomer',
       'Administrador de inventarios de BBVA Bancomer',
     ],
-    solutionTitle01: 'Antes',
-    solutionText01: '',
-    solutionImg01: ['./assets/img-guia-s01-01.jpg','./assets/img-guia-s01-02.jpg','./assets/img-guia-s01-03.jpg','./assets/img-guia-s01-04.jpg'],
-    solutionTitle02: 'Solución final',
-    solutionText02: '',
-    solutionImg02: ['./assets/img-guia-s02-01.jpg','./assets/img-guia-s02-02.jpg','./assets/img-guia-s02-03.jpg','./assets/img-guia-s02-04.jpg'],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Antes',
+      images: ['./assets/img-guia-s01-01.jpg','./assets/img-guia-s01-02.jpg','./assets/img-guia-s01-03.jpg','./assets/img-guia-s01-04.jpg'],
+      },
+    {
+      title: 'Solución final',
+      images: ['./assets/img-guia-s02-01.jpg','./assets/img-guia-s02-02.jpg','./assets/img-guia-s02-03.jpg','./assets/img-guia-s02-04.jpg'],
+    }
+    ]
   },{
     id: 6,
     name: 'Rediseño App Línea Bancomer',
@@ -237,18 +229,23 @@ export const PROJECTS: Project[] = [
     targets: [
       'Clientes de BBVA Bancomer que llaman regularmente a Línea Bancomer',
     ],
-    solutionTitle01: 'Antes',
-    solutionText01: 'Con el auge de las aplicaciones, BBVA Bancomer lanzó una app para que los clientes puedan tener el número oficial de su centro de atención a clientes y entrar a la llama identificados y autenticados. La idea era que pudieran entrar directamente al menú y no escucharlo en la llamada.',
-    solutionImg01: ['./assets/img-linea-s01-01.png','./assets/img-linea-s01-02.png'],
-    solutionTitle02: 'Primer rediseño 2015',
-    solutionText02: 'En esta primera etapa, rediseñamos la app y agregamos una funcionalidad para ayudar a los clientes a localizar cajeros y sucursales cercanas; indicando su ubicación, horarios de atención, como llegar y si tiene mucha afluencia.',
-    solutionImg02: ['./assets/img-linea-s02-01.png','./assets/img-linea-s02-02.png','./assets/img-linea-s02-03.png','./assets/img-linea-s02-04.png'],
-    solutionTitle03: 'Segundo rediseño 2015 - 2016',
-    solutionText03: 'En este proyecto hicimos múltiples iteraciones y con el tiempo fuimos agregando funcionalidades cada vez más innovadoras y la app línea Bancomer se fue convirtiendo en una app de ayuda para los clientes, aligerando la carga del call center.',
-    solutionImg03: ['./assets/img-linea-s03-01.png','./assets/img-linea-s03-02.png','./assets/img-linea-s03-03.png','./assets/img-linea-s03-04.png'],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Antes',
+      description: 'Con el auge de las aplicaciones, BBVA Bancomer lanzó una app para que los clientes puedan tener el número oficial de su centro de atención a clientes y entrar a la llama identificados y autenticados. La idea era que pudieran entrar directamente al menú y no escucharlo en la llamada.',
+      images: ['./assets/img-linea-s01-01.png','./assets/img-linea-s01-02.png'],
+      },
+    {
+      title: 'Primer rediseño 2015',
+      description: 'En esta primera etapa, rediseñamos la app y agregamos una funcionalidad para ayudar a los clientes a localizar cajeros y sucursales cercanas; indicando su ubicación, horarios de atención, como llegar y si tiene mucha afluencia.',
+      images: ['./assets/img-linea-s02-01.png','./assets/img-linea-s02-02.png','./assets/img-linea-s02-03.png','./assets/img-linea-s02-04.png'],
+      },
+    {
+      title: 'Segundo rediseño 2015 - 2016',
+      description: 'En este proyecto hicimos múltiples iteraciones y con el tiempo fuimos agregando funcionalidades cada vez más innovadoras y la app línea Bancomer se fue convirtiendo en una app de ayuda para los clientes, aligerando la carga del call center.',
+      images: ['./assets/img-linea-s03-01.png','./assets/img-linea-s03-02.png','./assets/img-linea-s03-03.png','./assets/img-linea-s03-04.png'],
+    }
+    ]
   },{
     id: 7,
     name: 'Distinción Patrimonial',
@@ -274,18 +271,13 @@ export const PROJECTS: Project[] = [
       'Clientes del segmento privado',
       'Clientes del segmento UHN',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto diseñamos una experiencia simple pero funcional, a apegada a los lineamientos de la organización en cuestión visual y brindando el servicio de consulta de saldos y atención directa.',
-    solutionImg01: ['./assets/img-patrimonial-s01-01.png','./assets/img-patrimonial-s01-02.png','./assets/img-patrimonial-s01-03.png','./assets/img-patrimonial-s01-04.png'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto diseñamos una experiencia simple pero funcional, a apegada a los lineamientos de la organización en cuestión visual y brindando el servicio de consulta de saldos y atención directa.',
+      images: ['./assets/img-patrimonial-s01-01.png','./assets/img-patrimonial-s01-02.png','./assets/img-patrimonial-s01-03.png','./assets/img-patrimonial-s01-04.png'],
+    }
+    ]
   },{
     id: 8,
     name: 'Diseño App TDC Empresarial',
@@ -308,18 +300,13 @@ export const PROJECTS: Project[] = [
     targets: [
       'Colaboradores de BBVA Bancomer',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto hicimos múltiples iteraciones hasta llegar a la solución final. Diseñamos una aplicación para el uso interno de la organización que ayude a sus colaboradores a tener una mejor gestión de sus viajes.',
-    solutionImg01: ['./assets/img-tdc-empresarial-s01-01.png','./assets/img-tdc-empresarial-s01-02.png','./assets/img-tdc-empresarial-s01-03.png','./assets/img-tdc-empresarial-s01-04.png'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto hicimos múltiples iteraciones hasta llegar a la solución final. Diseñamos una aplicación para el uso interno de la organización que ayude a sus colaboradores a tener una mejor gestión de sus viajes.',
+      images: ['./assets/img-tdc-empresarial-s01-01.png','./assets/img-tdc-empresarial-s01-02.png','./assets/img-tdc-empresarial-s01-03.png','./assets/img-tdc-empresarial-s01-04.png'],
+    }
+    ]
   },{
     id: 9,
     name: 'Sistema Único de Controversias',
@@ -343,18 +330,13 @@ export const PROJECTS: Project[] = [
       'Operador de E-global',
       'Contadores de E-global',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto diseñamos y desarrollamos un sistema único, en el cual se pueden dar servicios a los clientes de forma homologada y centralizada. Además de llevar a cabo la contabilidad de una forma automatizada.',
-    solutionImg01: ['./assets/img-suc-s01-01.jpg','./assets/img-suc-s01-02.jpg','./assets/img-suc-s01-03.jpg','./assets/img-suc-s01-04.jpg'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto diseñamos y desarrollamos un sistema único, en el cual se pueden dar servicios a los clientes de forma homologada y centralizada. Además de llevar a cabo la contabilidad de una forma automatizada.',
+      images: ['./assets/img-suc-s01-01.jpg','./assets/img-suc-s01-02.jpg','./assets/img-suc-s01-03.jpg','./assets/img-suc-s01-04.jpg'],
+    }
+    ]
   },{
     id: 10,
     name: 'App Transporte corporativo',
@@ -377,18 +359,13 @@ export const PROJECTS: Project[] = [
     targets: [
       'Colaboradores de BBVA Bancomer',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto hicimos múltiples iteraciones después de cada test, hasta llegar a la solución final. Retomamos una propuesta de diseño que ya se había trabajado y se rediseñó para tener una mejor experiencia.',
-    solutionImg01: ['./assets/img-tdc-empresarial-s01-01.png','./assets/img-tdc-empresarial-s01-02.png','./assets/img-tdc-empresarial-s01-03.png','./assets/img-tdc-empresarial-s01-04.png'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto hicimos múltiples iteraciones después de cada test, hasta llegar a la solución final. Retomamos una propuesta de diseño que ya se había trabajado y se rediseñó para tener una mejor experiencia.',
+      images: ['./assets/img-tdc-empresarial-s01-01.png','./assets/img-tdc-empresarial-s01-02.png','./assets/img-tdc-empresarial-s01-03.png','./assets/img-tdc-empresarial-s01-04.png'],
+    }
+    ]
   },{
     id: 11,
     name: 'App Bhappy',
@@ -411,18 +388,13 @@ export const PROJECTS: Project[] = [
     targets: [
       'Colaboradores de BBVA Bancomer',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto hicimos múltiples iteraciones después de cada test, hasta llegar a la solución final. Retomamos una propuesta de diseño que ya se había trabajado y se rediseñó para tener una mejor experiencia.',
-    solutionImg01: ['./assets/img-bhappy-s01-01.png','./assets/img-bhappy-s01-02.png','./assets/img-bhappy-s01-03.png','./assets/img-bhappy-s01-04.png','./assets/img-bhappy-s01-05.png','./assets/img-bhappy-s01-06.png','./assets/img-bhappy-s01-07.png','./assets/img-bhappy-s01-08.png'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto hicimos múltiples iteraciones después de cada test, hasta llegar a la solución final. Retomamos una propuesta de diseño que ya se había trabajado y se rediseñó para tener una mejor experiencia.',
+      images: ['./assets/img-bhappy-s01-01.png','./assets/img-bhappy-s01-02.png','./assets/img-bhappy-s01-03.png','./assets/img-bhappy-s01-04.png','./assets/img-bhappy-s01-05.png','./assets/img-bhappy-s01-06.png','./assets/img-bhappy-s01-07.png','./assets/img-bhappy-s01-08.png'],
+    }
+    ]
   },{
     id: 12,
     name: 'A2CENSO',
@@ -446,18 +418,13 @@ export const PROJECTS: Project[] = [
       'Emisores',
       'Inversionistas',
     ],
-    solutionTitle01: 'Solución final',
-    solutionText01: 'En este proyecto hicimos múltiples iteraciones después de cada test, hasta llegar a la solución final. Fue un proyecto 100% remoto. Colaboramos con el cliente que estaba en Colombia, con desarrolladores ubicados en la india y el equipo de diseño en México.',
-    solutionImg01: ['./assets/img-a2censo-s01-01.png','./assets/img-a2censo-s01-02.png','./assets/img-a2censo-s01-03.png','./assets/img-a2censo-s01-04.png'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final',
+      description: 'En este proyecto hicimos múltiples iteraciones después de cada test, hasta llegar a la solución final. Fue un proyecto 100% remoto. Colaboramos con el cliente que estaba en Colombia, con desarrolladores ubicados en la india y el equipo de diseño en México.',
+      images: ['./assets/img-a2censo-s01-01.png','./assets/img-a2censo-s01-02.png','./assets/img-a2censo-s01-03.png','./assets/img-a2censo-s01-04.png'],
+    }
+    ]
   },{
     id: 13,
     name: 'Módulo OTP Transversal',
@@ -483,18 +450,16 @@ export const PROJECTS: Project[] = [
     targets: [
       'Clientes que utilizan la banca digital de Scotiabank',
     ],
-    solutionTitle01: 'Antes',
-    solutionText01: '',
-    solutionImg01: ['./assets/img-otp-s01-01.jpg','./assets/img-otp-s01-02.jpg','./assets/img-otp-s01-03.jpg','./assets/img-otp-s01-04.jpg'],
-    solutionTitle02: 'Solución final',
-    solutionText02: '',
-    solutionImg02: ['./assets/img-otp-s02-01.jpg','./assets/img-otp-s02-02.jpg','./assets/img-otp-s02-03.jpg'],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Antes',
+      images: ['./assets/img-otp-s01-01.jpg','./assets/img-otp-s01-02.jpg','./assets/img-otp-s01-03.jpg','./assets/img-otp-s01-04.jpg'],
+      },
+    {
+      title: 'Solución final',
+      images: ['./assets/img-otp-s02-01.jpg','./assets/img-otp-s02-02.jpg','./assets/img-otp-s02-03.jpg'],
+      }
+    ]
   },{
     id: 14,
     name: 'Cuenta Única N2 Exprés',
@@ -520,18 +485,16 @@ export const PROJECTS: Project[] = [
       'Clientes monoproducto de TDC',
       'Clientes multiprodcuto (Crédito + débito)'
     ],
-    solutionTitle01: 'Antes',
-    solutionText01: '',
-    solutionImg01: ['./assets/img-n2-s01-01.png','./assets/img-n2-s01-02.png','./assets/img-n2-s01-03.png','./assets/img-n2-s01-04.png'],
-    solutionTitle02: 'Solución final',
-    solutionText02: '',
-    solutionImg02: ['./assets/img-n2-s02-01.png','./assets/img-n2-s02-02.png','./assets/img-n2-s02-03.png','./assets/img-n2-s02-04.png'],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Antes',
+      images: ['./assets/img-n2-s01-01.png','./assets/img-n2-s01-02.png','./assets/img-n2-s01-03.png','./assets/img-n2-s01-04.png'],
+      },
+    {
+      title: 'Solución final',
+      images: ['./assets/img-n2-s02-01.png','./assets/img-n2-s02-02.png','./assets/img-n2-s02-03.png','./assets/img-n2-s02-04.png'],
+      }
+    ]
   },{
     id: 15,
     name: 'Sistema OCRA',
@@ -558,18 +521,18 @@ export const PROJECTS: Project[] = [
       'Usuario de Compañías aseguradoras',
       'Usuarios de Autoridades'
     ],
-    solutionTitle01: 'Prueba de concepto',
-    solutionText01: 'Para poder participar en el proyecto, primero concursamos junto a otras 10 consultoras de alto prestigio. Realizamos una prueba de concepto y presentamos un prototipo mostrando funcionalidades innovadoras que pudieran complementar los requerimientos que el cliente había solicitado. Ganando la licitación.',
-    solutionImg01: [],
-    solutionTitle02: 'Solución final',
-    solutionText02: 'Se elaboró un sistema de diseño basado en los principios de Atomic Design para mantener la coherencia del diseño de toda la aplicación.',
-    solutionImg02: ['./assets/img-amis-s01-01.png','./assets/img-amis-s01-02.png','./assets/img-amis-s01-03.png','./assets/img-amis-s01-04.png','./assets/img-amis-s02-01.png','./assets/img-amis-s02-02.png','./assets/img-amis-s02-03.png','./assets/img-amis-s02-04.png'],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Prueba de concepto',
+      description: 'Para poder participar en el proyecto, primero concursamos junto a otras 10 consultoras de alto prestigio. Realizamos una prueba de concepto y presentamos un prototipo mostrando funcionalidades innovadoras que pudieran complementar los requerimientos que el cliente había solicitado. Ganando la licitación.',
+      images: [],
+      },
+    {
+      title: 'Solución final',
+      description: 'Se elaboró un sistema de diseño basado en los principios de Atomic Design para mantener la coherencia del diseño de toda la aplicación.',
+      images: ['./assets/img-amis-s01-01.png','./assets/img-amis-s01-02.png','./assets/img-amis-s01-03.png','./assets/img-amis-s01-04.png','./assets/img-amis-s02-01.png','./assets/img-amis-s02-02.png','./assets/img-amis-s02-03.png','./assets/img-amis-s02-04.png'],
+      }
+    ]
   },{
     id: 16,
     name: 'Ventas digitales',
@@ -593,18 +556,12 @@ export const PROJECTS: Project[] = [
       'Clientes con nómina en Santander',
       'No clientes de Santander',
     ],
-    solutionTitle01: 'Solución final Móvil',
-    solutionText01: 'Para este canal realizamos un facelift para el diseño, con los nuevos componentes dels sistema de diseño y un reacomodo del contenido y la jerarquía de información para optimizar los flujos',
-    solutionImg01: ['./assets/img-santander01-s01-01.jpg','./assets/img-santander01-s01-02.jpg','./assets/img-santander01-s01-03.jpg','./assets/img-santander01-s01-04.jpg'],
-    solutionTitle02: '',
-    solutionText02: '',
-    solutionImg02: [],
-    solutionTitle03: '',
-    solutionText03: '',
-    solutionImg03: [],
-    solutionTitle04: '',
-    solutionText04: '',
-    solutionImg04: [],
+    solutions: [
+    {
+      title: 'Solución final Móvil',
+      description: 'Para este canal realizamos un facelift para el diseño, con los nuevos componentes dels sistema de diseño y un reacomodo del contenido y la jerarquía de información para optimizar los flujos',
+      images: ['./assets/img-santander01-s01-01.jpg','./assets/img-santander01-s01-02.jpg','./assets/img-santander01-s01-03.jpg','./assets/img-santander01-s01-04.jpg'],
+      }
+    ]
   }
-
 ];
