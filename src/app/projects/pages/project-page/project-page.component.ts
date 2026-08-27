@@ -26,9 +26,7 @@ export class ProjectPageComponent implements OnInit {
       this.activatedRoute.snapshot.paramMap.get('id')
     );
 
-    this.project = this.projectsService.projects.find(
-      project => project.id === id
-    );
+    this.project = this.projectsService.getProjectById(id);
 
   }
 
