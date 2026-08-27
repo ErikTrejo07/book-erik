@@ -87,51 +87,23 @@
 
       <div class="col-12 col-sm-6">
 
-        <h5>
-          <strong>Problemática</strong>
-        </h5>
+      <h5>
+        <strong>Problemática</strong>
+      </h5>
 
-        <ul class="my-3">
+      <ul class="my-3">
 
-          <li class="my-2">
-            {{ project.problematic01 }}
-          </li>
+        <li
+          *ngFor="let problem of project.problems"
+          class="my-2">
 
-          <li
-            class="my-2"
-            *ngIf="project.problematic02">
+          {{ problem }}
 
-            {{ project.problematic02 }}
+        </li>
 
-          </li>
+      </ul>
 
-          <li
-            class="my-2"
-            *ngIf="project.problematic03">
-
-            {{ project.problematic03 }}
-
-          </li>
-
-          <li
-            class="my-2"
-            *ngIf="project.problematic04">
-
-            {{ project.problematic04 }}
-
-          </li>
-
-          <li
-            class="my-2"
-            *ngIf="project.problematic05">
-
-            {{ project.problematic05 }}
-
-          </li>
-
-        </ul>
-
-      </div>
+    </div>
 
 
       <div class="col-12 col-sm-6">
@@ -140,31 +112,8 @@
           <strong>¿Para quién diseñamos?</strong>
         </h5>
 
-
-        <div class="my-4">
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="currentColor"
-            class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-
-            <path
-              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-
-          </svg>
-
-          <span class="p-3">
-            <strong>{{ project.target01 }}</strong>
-          </span>
-
-        </div>
-
-
         <div
-          *ngIf="project.target02"
+          *ngFor="let target of project.targets"
           class="my-4">
 
           <svg
@@ -181,55 +130,7 @@
           </svg>
 
           <span class="p-3">
-            <strong>{{ project.target02 }}</strong>
-          </span>
-
-        </div>
-
-
-        <div
-          *ngIf="project.target03"
-          class="my-4">
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="currentColor"
-            class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-
-            <path
-              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-
-          </svg>
-
-          <span class="p-3">
-            <strong>{{ project.target03 }}</strong>
-          </span>
-
-        </div>
-
-
-        <div
-          *ngIf="project.target04"
-          class="my-4">
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="currentColor"
-            class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-
-            <path
-              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-
-          </svg>
-
-          <span class="p-3">
-            <strong>{{ project.target04 }}</strong>
+            <strong>{{ target }}</strong>
           </span>
 
         </div>
