@@ -1,9 +1,5 @@
-import { Injectable, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-
+import { Injectable } from '@angular/core';
 import { Project } from '../interfaces/project.interface';
-import { Channel } from '../interfaces/channel.type';
 
 @Injectable({ providedIn: 'root' })
 export class ProjectsService {
@@ -623,14 +619,5 @@ export class ProjectsService {
     solutionText04: '',
     solutionImg04: [],
   }];
-
-
-  showProjectById( id:number ) {
-    this.projects[id].id = id;
-  }
-
-  mantenerScroll() {
-    window.scrollTo(0, window.scrollY);
-  }
 
 }

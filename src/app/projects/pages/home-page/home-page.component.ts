@@ -1,21 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectsService } from '../../services/projects.service';
-import { ContactPageComponent } from '../../../shared/pages/contact-page/contact-page.component';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-by-capital-page',
+  selector: 'projects-home-page',
   templateUrl: './home-page.component.html',
-  styles: [
-  ]
+  styles: []
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent {
 
-
-  constructor(
-    private scrollService: ProjectsService
-  ) {}
-
-  ngOnInit() {
-    this.scrollService.mantenerScroll();
-  }
 }
