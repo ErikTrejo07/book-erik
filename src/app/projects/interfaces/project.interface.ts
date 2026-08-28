@@ -12,16 +12,12 @@ export interface Project {
   year: string;
   channel?: string;
 
-  shDescription: string;
+  shortDescription: string;
+  description: string[];
 
-  lgDescription01: string;
-  lgDescription02: string;
-  lgDescription03?: string;
-  lgDescription04?: string;
-
-  coverImg: string;
+  coverImage: string;
   device: string;
-  tool: string;
+  tools: string[];
 
   problems: string[];
   targets: string[];

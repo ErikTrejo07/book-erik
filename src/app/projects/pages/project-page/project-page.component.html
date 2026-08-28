@@ -22,20 +22,8 @@
 
         <br>
 
-        <p>
-          {{ project.lgDescription01 }}
-        </p>
-
-        <p>
-          {{ project.lgDescription02 }}
-        </p>
-
-        <p *ngIf="project.lgDescription03">
-          {{ project.lgDescription03 }}
-        </p>
-
-        <p *ngIf="project.lgDescription04">
-          {{ project.lgDescription04 }}
+        <p *ngFor="let paragraph of project.description">
+          {{ paragraph }}
         </p>
 
       </div>
@@ -48,7 +36,7 @@
           <div class="col-4 col-md-12">
 
             <img
-              [src]="project.coverImg"
+              [src]="project.coverImage"
               class="img-fluid border mb-2"
               [alt]="project.name">
 
@@ -68,7 +56,7 @@
 
             <p class="card-text">
               Herramientas:
-              <strong>{{ project.tool }}</strong>
+              <strong>{{ project.tools.join(', ') }}</strong>
             </p>
 
           </div>
